@@ -1,0 +1,276 @@
+{
+  "id": "00d764a3-df7a-4391-afcf-c234b0c39e36",
+  "version": "2.0",
+  "name": "Class 2025",
+  "url": "https://the-internet.herokuapp.com/checkboxes",
+  "tests": [{
+    "id": "fd54b76b-b113-4208-ae65-4ba76ac555b0",
+    "name": "Add Remove Item",
+    "commands": [{
+      "id": "d2f682cb-f3e6-4ac0-bb27-4d876ec2ed3f",
+      "comment": "",
+      "command": "open",
+      "target": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3467658-2b21-462f-8b0f-55e2a9e437bb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59d4598e-8424-4f8c-93c0-7a40a0505dca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.example > button",
+      "targets": [
+        ["css=.example > button", "css:finder"],
+        ["xpath=//button[@onclick='addElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Element')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93ad9491-3597-4049-97fa-9a357a9d99c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.example > button",
+      "targets": [
+        ["css=.example > button", "css:finder"],
+        ["xpath=//button[@onclick='addElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Element')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e6b988a-886b-457b-b36b-20980908f55a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.example > button",
+      "targets": [
+        ["css=.example > button", "css:finder"],
+        ["xpath=//button[@onclick='addElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Element')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc81d1bc-f48f-4bc9-990d-747ba14455a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.example > button",
+      "targets": [
+        ["css=.example > button", "css:finder"],
+        ["xpath=//button[@onclick='addElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Element')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea122bd0-ccb9-4a6e-8021-ae8e38fddb2b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.example > button",
+      "targets": [
+        ["css=.example > button", "css:finder"],
+        ["xpath=//button[@onclick='addElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Element')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fe5c368-be7e-4df7-98fb-3e8a2cfb4fd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.added-manually:nth-child(1)",
+      "targets": [
+        ["css=.added-manually:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='deleteElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='elements']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "058fe551-9b22-4578-bbd8-03fdd2385448",
+      "comment": "",
+      "command": "click",
+      "target": "css=.added-manually:nth-child(1)",
+      "targets": [
+        ["css=.added-manually:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='deleteElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='elements']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12314a8e-50e8-487c-931d-8899596ba050",
+      "comment": "",
+      "command": "click",
+      "target": "css=.added-manually:nth-child(1)",
+      "targets": [
+        ["css=.added-manually:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='deleteElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='elements']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09dff7c3-542a-4390-a24e-07e9b157fc13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.added-manually:nth-child(1)",
+      "targets": [
+        ["css=.added-manually:nth-child(1)", "css:finder"],
+        ["xpath=//button[@onclick='deleteElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='elements']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6a3a7bd-ae59-4dc2-b8da-5ce347dd2b88",
+      "comment": "",
+      "command": "click",
+      "target": "css=.added-manually",
+      "targets": [
+        ["css=.added-manually", "css:finder"],
+        ["xpath=//button[@onclick='deleteElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='elements']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd90cee6-213d-468f-936e-7da13b8d77f0",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.added-manually",
+      "targets": [
+        ["id=content", "id"],
+        ["css=#content", "css:finder"],
+        ["xpath=//div[@id='content']", "xpath:attributes"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "08fbbce8-4eb3-4089-b738-d48047dd4f0a",
+    "name": "Checkboxes",
+    "commands": [{
+      "id": "738a2907-1320-4e58-ab49-c75774f77816",
+      "comment": "",
+      "command": "open",
+      "target": "https://the-internet.herokuapp.com/checkboxes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4367b6f-6d9a-41c3-97f9-ec5f9fc55ec2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b760f536-13c7-4373-9622-5ccb53e1d39e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='content']/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Checkboxes')]", "xpath:innerText"]
+      ],
+      "value": "Checkboxes"
+    }, {
+      "id": "ba6ea043-0b45-4f35-a798-d99b732b038b",
+      "comment": "",
+      "command": "assertNotChecked",
+      "target": "css=#checkboxes > input:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b12e388f-7bca-4396-813e-f837ab4387a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#checkboxes > input:nth-child(1)",
+      "targets": [
+        ["css=#checkboxes > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//form[@id='checkboxes']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2df560a-bd46-4b07-935c-198fd2b9ad69",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "css=#checkboxes > input:nth-child(1)",
+      "targets": [
+        ["css=#checkboxes > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//form[@id='checkboxes']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "046b3741-484b-45e3-8614-67628e64168e",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "css=#checkboxes > input:nth-child(3)",
+      "targets": [
+        ["css=#checkboxes > input:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='checkboxes']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "386093c4-2133-44ea-b667-5fa43ac8c6cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=#checkboxes > input:nth-child(3)",
+      "targets": [
+        ["css=#checkboxes > input:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='checkboxes']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e710b5b3-499a-46a7-a760-40c16ca3ca34",
+      "comment": "",
+      "command": "assertNotChecked",
+      "target": "css=#checkboxes > input:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a254bb7b-50da-4318-bf57-f75a2b6687e0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "35764063-c241-4149-9e28-695f6ee49060",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fd54b76b-b113-4208-ae65-4ba76ac555b0"]
+  }],
+  "urls": ["https://the-internet.herokuapp.com/add_remove_elements/", "https://the-internet.herokuapp.com/checkboxes"],
+  "plugins": []
+}
