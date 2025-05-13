@@ -1,0 +1,366 @@
+{
+  "id": "0915621a-652f-4f41-82ab-4b5329e66986",
+  "version": "2.0",
+  "name": "Simple Note Taker",
+  "url": "https://testpages.eviltester.com",
+  "tests": [{
+    "id": "6e3706b9-dfdc-40fc-a76e-786b544a935a",
+    "name": "Add note",
+    "commands": [{
+      "id": "948bf2d6-c4d6-489c-a691-2713465f4b53",
+      "comment": "",
+      "command": "open",
+      "target": "/styled/apps/notes/simplenotes.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb91f7c3-76ed-45e6-b156-9194b092112c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "724x829",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e5c0fd8-d927-4074-bdd6-1bade823ac13",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-title-input",
+      "targets": [
+        ["id=note-title-input", "id"],
+        ["css=#note-title-input", "css:finder"],
+        ["xpath=//input[@id='note-title-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b16a9b4d-59a8-4280-b6ae-045e325bad80",
+      "comment": "",
+      "command": "type",
+      "target": "id=note-title-input",
+      "targets": [
+        ["id=note-title-input", "id"],
+        ["css=#note-title-input", "css:finder"],
+        ["xpath=//input[@id='note-title-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "${title}"
+    }, {
+      "id": "0a3e4f2e-d018-4cfa-a934-f5c88e16249a",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-details-input",
+      "targets": [
+        ["id=note-details-input", "id"],
+        ["css=#note-details-input", "css:finder"],
+        ["xpath=//textarea[@id='note-details-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9461f6e0-fb7b-4cfa-bbda-7e50280c9459",
+      "comment": "",
+      "command": "type",
+      "target": "id=note-details-input",
+      "targets": [
+        ["id=note-details-input", "id"],
+        ["css=#note-details-input", "css:finder"],
+        ["xpath=//textarea[@id='note-details-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${body}"
+    }, {
+      "id": "42cdfbd1-437f-43d2-b334-0dbe87490d3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-note",
+      "targets": [
+        ["id=add-note", "id"],
+        ["css=#add-note", "css:finder"],
+        ["xpath=//button[@id='add-note']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2fac7fc8-fa0a-491c-bfb2-e86b80b427f5",
+    "name": "add new note and try to delete it",
+    "commands": [{
+      "id": "ab6b8149-6d58-4dd4-8f43-57af254fb442",
+      "comment": "",
+      "command": "store",
+      "target": "\"Note Title\"",
+      "targets": [],
+      "value": "title"
+    }, {
+      "id": "32fda414-3132-4932-bc8c-9552b237cc53",
+      "comment": "",
+      "command": "store",
+      "target": "\"Note body\"",
+      "targets": [],
+      "value": "body"
+    }, {
+      "id": "bd9f380e-6e2e-4ff8-8b47-30cab9fffec2",
+      "comment": "",
+      "command": "run",
+      "target": "Add note",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7737ef68-e5ad-4cd1-9575-7c1e4dfb918a",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e17a71de-5d15-4b4b-b631-724f350e9598",
+      "comment": "",
+      "command": "click",
+      "target": "id=clear-notes",
+      "targets": [
+        ["id=clear-notes", "id"],
+        ["css=#clear-notes", "css:finder"],
+        ["xpath=//button[@id='clear-notes']", "xpath:attributes"],
+        ["xpath=//div[@id='notes-list']/div/button[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f52aa9a9-9fdd-42e2-9f6f-13a2aab336af",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure you want to delete all notes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da1c4ff0-c0aa-4621-91dd-3670b4094a7a",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "349f485e-1c85-4e20-aa64-1853e1042ed1",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8c7c0ce-5c46-4003-870a-1871333e3335",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5fa5754b-f953-4459-8b16-1e1b5c076591",
+    "name": "add note and edit it ",
+    "commands": [{
+      "id": "4b771a0e-70d2-463e-b17e-72641ffa3606",
+      "comment": "",
+      "command": "store",
+      "target": "\"Note body\"",
+      "targets": [],
+      "value": "body"
+    }, {
+      "id": "71e70dcb-48f0-424f-b401-af9b83ecb3bb",
+      "comment": "",
+      "command": "store",
+      "target": "\"Note Title\"",
+      "targets": [],
+      "value": "title"
+    }, {
+      "id": "69f0999d-9ff1-4fcd-a56e-83451a7cc8f3",
+      "comment": "",
+      "command": "run",
+      "target": "Add note",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf0bb6b0-8637-4a28-aa71-ad7a55e61233",
+      "comment": "",
+      "command": "click",
+      "target": "css=.edit-note-in-list",
+      "targets": [
+        ["css=.edit-note-in-list", "css:finder"],
+        ["xpath=//div[@id='list-of-notes']/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "063213c3-f681-4895-804b-8384adc4723d",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-title-input",
+      "targets": [
+        ["id=note-title-input", "id"],
+        ["css=#note-title-input", "css:finder"],
+        ["xpath=//input[@id='note-title-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eedf2a03-5e6f-4030-a890-40755fc060fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-title-input",
+      "targets": [
+        ["id=note-title-input", "id"],
+        ["css=#note-title-input", "css:finder"],
+        ["xpath=//input[@id='note-title-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21a77d2e-4f26-43dc-8e82-4a72eda3bdca",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=note-title-input",
+      "targets": [
+        ["id=note-title-input", "id"],
+        ["css=#note-title-input", "css:finder"],
+        ["xpath=//input[@id='note-title-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfa08f38-7c77-42d3-9cf9-9f125d04a538",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-title-input",
+      "targets": [
+        ["id=note-title-input", "id"],
+        ["css=#note-title-input", "css:finder"],
+        ["xpath=//input[@id='note-title-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "361b12a9-b6c4-45d8-90ac-ee97b3b6b54d",
+      "comment": "",
+      "command": "type",
+      "target": "id=note-title-input",
+      "targets": [
+        ["id=note-title-input", "id"],
+        ["css=#note-title-input", "css:finder"],
+        ["xpath=//input[@id='note-title-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "good morning"
+    }, {
+      "id": "b5c60b60-0cd4-4d74-ae86-f0e926a188e7",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-details-input",
+      "targets": [
+        ["id=note-details-input", "id"],
+        ["css=#note-details-input", "css:finder"],
+        ["xpath=//textarea[@id='note-details-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abd1a7a9-441d-4a9f-a770-b7b0f1bdace4",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-details-input",
+      "targets": [
+        ["id=note-details-input", "id"],
+        ["css=#note-details-input", "css:finder"],
+        ["xpath=//textarea[@id='note-details-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46d95fd2-db5e-4ebf-91f7-3177cc933e65",
+      "comment": "",
+      "command": "click",
+      "target": "id=note-details-input",
+      "targets": [
+        ["id=note-details-input", "id"],
+        ["css=#note-details-input", "css:finder"],
+        ["xpath=//textarea[@id='note-details-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53fbf147-1fd6-49d4-a656-335c6ad4a038",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=note-details-input",
+      "targets": [
+        ["id=note-details-input", "id"],
+        ["css=#note-details-input", "css:finder"],
+        ["xpath=//textarea[@id='note-details-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "372c5ffb-37a5-4d49-ad63-8ec6598e01d4",
+      "comment": "",
+      "command": "type",
+      "target": "id=note-details-input",
+      "targets": [
+        ["id=note-details-input", "id"],
+        ["css=#note-details-input", "css:finder"],
+        ["xpath=//textarea[@id='note-details-input']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "today is agood day \\n"
+    }, {
+      "id": "2ad2e73f-c319-407a-b32f-16111f879ea7",
+      "comment": "",
+      "command": "click",
+      "target": "id=update-note",
+      "targets": [
+        ["id=update-note", "id"],
+        ["css=#update-note", "css:finder"],
+        ["xpath=//button[@id='update-note']", "xpath:attributes"],
+        ["xpath=//form[@id='edit-form']/div/div[4]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7ab1f55-05e9-46bd-b9bb-2f47393ee48c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "31b7b97e-cd64-4a6e-b61a-8ea1563afa8f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6e3706b9-dfdc-40fc-a76e-786b544a935a"]
+  }],
+  "urls": ["https://testpages.eviltester.com/"],
+  "plugins": []
+}
