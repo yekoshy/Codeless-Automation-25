@@ -2,7 +2,7 @@
   "id": "00d764a3-df7a-4391-afcf-c234b0c39e36",
   "version": "2.0",
   "name": "Class 2025",
-  "url": "https://the-internet.herokuapp.com/checkboxes",
+  "url": "https://testpages.eviltester.com/styled/apps/7charval/simple7charvalidation.html",
   "tests": [{
     "id": "fd54b76b-b113-4208-ae65-4ba76ac555b0",
     "name": "Add Remove Item",
@@ -262,6 +262,191 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "9b6cea63-2bfc-48e2-90e2-064d5c23b91b",
+    "name": "Add Remove Item-loops",
+    "commands": [{
+      "id": "20effc58-e14b-4c03-a542-7ea34bf8e020",
+      "comment": "",
+      "command": "open",
+      "target": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "929f54db-cb69-4ae6-bc32-c2b085dc898f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee1370b2-c111-4492-8c50-e1bfb0540577",
+      "comment": "",
+      "command": "times",
+      "target": "5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "696f6e24-4276-4d33-88b7-4839248b0eb1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.example > button",
+      "targets": [
+        ["css=.example > button", "css:finder"],
+        ["xpath=//button[@onclick='addElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Element')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2147668-6772-46f9-801b-03629ba8e586",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7a9781a-e60c-43d3-85c6-f1e218bbe729",
+      "comment": "",
+      "command": "times",
+      "target": "5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e90e402a-2323-4206-a7a1-7454652ee810",
+      "comment": "",
+      "command": "click",
+      "target": "css=.added-manually",
+      "targets": [
+        ["css=.added-manually", "css:finder"],
+        ["xpath=//button[@onclick='deleteElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='elements']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f950b20-bbe4-4296-a9c4-034f9e70f9ec",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c38b4c3-1030-4c92-8035-b7584a329ad4",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.added-manually",
+      "targets": [
+        ["id=content", "id"],
+        ["css=#content", "css:finder"],
+        ["xpath=//div[@id='content']", "xpath:attributes"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "cabcde28-3f92-4ee2-9be0-c1d93455da70",
+    "name": "7 Char Validator",
+    "commands": [{
+      "id": "c962f1ce-f793-4df1-accc-9b0e5ba733be",
+      "comment": "",
+      "command": "open",
+      "target": "https://testpages.eviltester.com/styled/apps/7charval/simple7charvalidation.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f670f702-3fb5-405e-89c8-af1e808f18b4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b309cb17-3753-4890-aae8-6ddde1577b15",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [   { input: \"9999999\", output: \"Valid Value\" },   { input: \"#$%^#\", output: \"Invalid Value\" },   { input: \"hendd**\", output: \"Valid Value\" },   { input: \"jdtegdj\", output: \"Valid Value\" },   { input: \"3705490\", output: \"Valid Value\" },   { input: \"ASHFbnj\", output: \"Valid Value\" },   { input: \"hye76BG\", output: \"Valid Value\" },   { input: \"23BgbG*\", output: \"Valid Value\" },   { input: \"gyr$%8N\", output: \"Invalid Value\" },   { input: \"bhtr50\", output: \"Invalid Value\" },   { input: \"\", output: \"Invalid Value\" },   { input: \"huy bh\", output: \"Invalid Value\" },   { input: \"iujgt567\", output: \"Invalid Value\" } ]",
+      "targets": [],
+      "value": "values"
+    }, {
+      "id": "9385cb72-44c7-4ee2-bd06-f662b9ecb57a",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "return  [   [\"9999999\", \"Valid Value\"],   [\"#$%^#\", \"Invalid Value\"],   [\"hendd**\", \"Valid Value\"],   [\"jdtegdj\", \"Valid Value\"],   [\"3705490\", \"Valid Value\"],   [\"ASHFbnj\", \"Valid Value\"],   [\"hye76BG\", \"Valid Value\"],   [\"23BgbG*\", \"Valid Value\"],   [\"gyr$%8N\", \"Invalid Value\"],   [\"bhtr50\", \"Invalid Value\"],   [\"\", \"Invalid Value\"],   [\"huy bh\", \"Invalid Value\"],   [\"iujgt567\", \"Invalid Value\"] ];",
+      "targets": [],
+      "value": "values"
+    }, {
+      "id": "b180cdc2-4b4a-4d86-9338-ec59c58e5b0f",
+      "comment": "",
+      "command": "forEach",
+      "target": "values",
+      "targets": [],
+      "value": "value"
+    }, {
+      "id": "5e476e23-7dd2-4d19-9349-e1e3ea02ae82",
+      "comment": "",
+      "command": "click",
+      "target": "name=characters",
+      "targets": [
+        ["name=characters", "name"],
+        ["css=p:nth-child(1) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='characters']", "xpath:attributes"],
+        ["xpath=//form/p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8221ddd-9bee-4cb4-aaef-40bded757844",
+      "comment": "",
+      "command": "type",
+      "target": "name=characters",
+      "targets": [
+        ["name=characters", "name"],
+        ["css=p:nth-child(1) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='characters']", "xpath:attributes"],
+        ["xpath=//form/p/input", "xpath:position"]
+      ],
+      "value": "${value.input}"
+    }, {
+      "id": "8ab49b46-0da5-4121-93e5-7f9811ee1cb0",
+      "comment": "",
+      "command": "click",
+      "target": "name=validate",
+      "targets": [
+        ["name=validate", "name"],
+        ["css=p:nth-child(2) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='validate']", "xpath:attributes"],
+        ["xpath=//form/p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4839368-b4fc-46c3-bc08-4c636fb68ef8",
+      "comment": "",
+      "command": "echo",
+      "target": "${value.input}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60a4e39b-6995-4feb-8dbc-59895d27608a",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=validation_message",
+      "targets": [
+        ["name=validation_message", "name"],
+        ["css=p:nth-child(1) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='validation_message']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${value.output}"
+    }, {
+      "id": "c3f5b92a-8c2a-4a6c-804b-7c4c7e3b35aa",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "35764063-c241-4149-9e28-695f6ee49060",
@@ -269,8 +454,8 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["fd54b76b-b113-4208-ae65-4ba76ac555b0"]
+    "tests": ["fd54b76b-b113-4208-ae65-4ba76ac555b0", "9b6cea63-2bfc-48e2-90e2-064d5c23b91b", "08fbbce8-4eb3-4089-b738-d48047dd4f0a"]
   }],
-  "urls": ["https://the-internet.herokuapp.com/add_remove_elements/", "https://the-internet.herokuapp.com/checkboxes"],
+  "urls": ["https://the-internet.herokuapp.com/add_remove_elements/", "https://the-internet.herokuapp.com/checkboxes", "https://testpages.eviltester.com/styled/apps/7charval/simple7charvalidation.html"],
   "plugins": []
 }
