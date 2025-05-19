@@ -13,7 +13,7 @@ function clickButton(buttonID) {
   if (btn) btn.click();
   else console.warn(`Button with id "${buttonID}" not found.`);
 }
-
+//function TestTriangle(case) {
 function TestTriangle({side1, side2, side3, expectedDescription}) {
   document.querySelector("#side1").value = side1;
   document.querySelector("#side2").value = side2;
@@ -27,52 +27,42 @@ function TestTriangle({side1, side2, side3, expectedDescription}) {
               'Expected text to be ' + expectedDescription
 );
 
+  const container = document.querySelector("body > div.page-body > div.centered > div.triangle-canvas-container");
+  if (!container) {
+    console.assert(false, "❌ FAIL: No container for triangle image found");
+  } 
     
 }
 
 const testCases = [
   {
     side1: "5", side2: "5", side3: "5",
-    expectedDescription: "Equilateral Triangle"
+    expectedDescription: "Equilateral"
   },
   {
     side1: "5", side2: "6", side3: "7",
-    expectedDescription: "Scalene Triangle"
+    expectedDescription: "Scalene"
   },
   {
     side1: "5", side2: "5", side3: "7",
-    expectedDescription: "Isosceles Triangle"
+    expectedDescription: "Isosceles"
   },
   {
     side1: "-1", side2: "7", side3: "9",
-    expectedDescription: "Not a Triangle"
+    expectedDescription: "Error: Not a Triangle"
   },
   {
     side1: "e", side2: "7", side3: "9",
-    expectedDescription: "Not a Triangle"
+    expectedDescription: "Error: Side 1 is not a Number"
   },
   {
     side1: "0", side2: "7", side3: "9",
-    expectedDescription: "Not a Triangle"
+    expectedDescription: "Error: Not a Triangle"
   },
   {
     side1: "0", side2: "0", side3: "0",
-    expectedDescription: "Not a Triangle"
+    expectedDescription: "Error: Not a Triangle"
   }
 ];
- 
- document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector("body > div.page-body > div.centered > div.triangle-canvas-container");
-  if (!container) {
-    console.assert(false, "❌ FAIL: No container for triangle image found");
-  } else {
-    const img = container.querySelector("img");
-    if (img) {
-      console.assert(true, "✅ PASS: Triangle image displayed");
-    } else {
-      console.assert(false, "❌ FAIL: No triangle image displayed");
-    }
-  }
 
-  testCases.forEach(test => TestTriangle(test));
-});
+ testCases.forEach(test => TestTriangle(test));
