@@ -1,0 +1,25 @@
+
+
+//Verify "Yes" radio button is selectable
+
+
+document.querySelector('#yesRadio').click();
+assert(document.querySelector('#yesRadio').checked === true, '"Yes" radio should be selected');
+assert(document.querySelector('.text-success').textContent.includes('Yes'), 'Result text should show "Yes"');
+
+
+// Verify "Impressive" radio button is selectable
+
+
+document.querySelector('#impressiveRadio').click();
+assert(document.querySelector('#impressiveRadio').checked === true, '"Impressive" radio should be selected');
+assert(document.querySelector('.text-success').textContent.includes('Impressive'), 'Result text should show "Impressive"');
+
+
+//Verify "No" radio button is disabled
+
+
+const noRadio = document.querySelector('#noRadio');
+assert(noRadio.disabled === true, '"No" radio should be disabled');
+
+
