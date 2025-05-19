@@ -9,4 +9,4 @@ let pixel = document.querySelector("#triangle-canvas").getContext('2d').getImage
 //pixel[] not equal to zero
 //Selenium IDE commands:
 captureEntirePageScreenshot
-verifyElementPresent
+eyes check element
