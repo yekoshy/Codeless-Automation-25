@@ -1,3 +1,4 @@
+//link: https://testpages.eviltester.com/styled/apps/triangle/triangle001.html 
 document.querySelector("#side1").value
 document.querySelector("#side2").value
 document.querySelector("#side3").value
