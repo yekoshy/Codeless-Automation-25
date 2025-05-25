@@ -1,0 +1,52 @@
+
+
+function clickButton() {
+    document.querySelector('button[onclick="calculate()"]').click();
+}
+
+function enterInput1(value) {
+    document.querySelector('#input1').value = value;
+}
+
+function enterInput2(value) { 
+    document.querySelector('#input2').value = value;
+}
+
+function selectOp(operation) {
+    document.querySelector('#operation').value = operation;
+}
+
+function enterInput(input1, input2, operation) {
+    enterInput1(input1);
+    enterInput2(input2);
+    selectOp(operation);
+    clickButton();
+}
+
+
+    
+const testCases = [
+  { id: "TC01", input1: 5, input2: 5, operation: "+", expected: "Result: 10" },
+  { id: "TC02", input1: 10, input2: 7, operation: "-", expected: "Result: 3"},
+  { id: "TC03", input1: 20, input2: 10, operation: "*", expected: "Result: 200" },
+  { id: "TC04", input1: 20, input2: 5, operation: "/", expected: "Result: 4"  },
+  { id: "TC05", input1: 40, input2: 0, operation: "/", expected: "Result: ⚠️ Cannot divide by zero"},
+  { id: "TC06", input1: "ffebf", input2: 453, operation: "*", expected: "⚠️ Please enter valid numbers!"},
+  { id: "TC07", input1: 50, input2: "", operation: "+", expected: "⚠️ Please enter valid numbers!"},
+  { id: "TC08", input1: -5, input2: -2, operation: "+", expected: "Result: -7"},
+  { id: "TC09", input1: "@9", input2: 10, operation: "*", expected: "⚠️ Please enter valid numbers!"},
+  { id: "TC10", input1: "100g", input2: 10, operation: "*", expected: "⚠️ Please enter valid numbers!"},
+  { id: "TC11", input1: -2.5, input2: -1.5, operation: "+", expected: "Result: -4"}
+];
+
+
+testCases.forEach(testCase => {
+  enterInput(testCase.input1, testCase.input2, testCase.operation);
+
+  const result = document.querySelector('#result').textContent.trim();
+
+  console.assert(
+    result == testCase.expected,
+    `Test ${testCase.id} failed for inputs (${testCase.input1}, ${testCase.input2}, ${testCase.operation}): expected ${testCase.expected}, got ${result}`
+  );
+});
