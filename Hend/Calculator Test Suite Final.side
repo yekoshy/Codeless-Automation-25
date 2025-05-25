@@ -1,0 +1,118 @@
+{
+  "id": "calculator-tests",
+  "version": "2.0",
+  "name": "Calculator Test Suite",
+  "url": "https://yekoshy.github.io/SimpleCalc/",
+  "tests": [{
+    "id": "calculator-test",
+    "name": "Calculator Test",
+    "commands": [{
+      "id": "bd750b2b-3215-487f-bca5-8213e48b2f7b",
+      "comment": "",
+      "command": "open",
+      "target": "https://yekoshy.github.io/SimpleCalc/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34fde775-55f6-4f5f-a1eb-11fd5000a50d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [{\"id\": \"TC01\", \"input1\": 5, \"input2\": 5, \"operation\": \"+\", \"expected\": \"Result: 10\"}, {\"id\": \"TC02\", \"input1\": 10, \"input2\": 7, \"operation\": \"-\", \"expected\": \"Result: 3\"}, {\"id\": \"TC03\", \"input1\": 20, \"input2\": 10, \"operation\": \"*\", \"expected\": \"Result: 200\"}, {\"id\": \"TC04\", \"input1\": 20, \"input2\": 5, \"operation\": \"/\", \"expected\": \"Result: 4\"}, {\"id\": \"TC05\", \"input1\": 40, \"input2\": 0, \"operation\": \"/\", \"expected\": \"Result: \\u26a0\\ufe0f Cannot divide by zero\"}, {\"id\": \"TC06\", \"input1\": \"ffebf\", \"input2\": 453, \"operation\": \"*\", \"expected\": \"\\u26a0\\ufe0f Please enter valid numbers!\"}, {\"id\": \"TC07\", \"input1\": 50, \"input2\": \"\", \"operation\": \"+\", \"expected\": \"\\u26a0\\ufe0f Please enter valid numbers!\"}, {\"id\": \"TC08\", \"input1\": -5, \"input2\": -2, \"operation\": \"+\", \"expected\": \"Result: -7\"}, {\"id\": \"TC09\", \"input1\": \"@9\", \"input2\": 10, \"operation\": \"*\", \"expected\": \"\\u26a0\\ufe0f Please enter valid numbers!\"}, {\"id\": \"TC10\", \"input1\": \"100g\", \"input2\": 10, \"operation\": \"*\", \"expected\": \"\\u26a0\\ufe0f Please enter valid numbers!\"}, {\"id\": \"TC11\", \"input1\": -2.5, \"input2\": -1.5, \"operation\": \"+\", \"expected\": \"Result: -4\"}];",
+      "targets": [],
+      "value": "testCases"
+    }, {
+      "id": "3c771263-beb5-4206-b13f-a1c107c64391",
+      "comment": "",
+      "command": "forEach",
+      "target": "testCases",
+      "targets": [],
+      "value": "testCase"
+    }, {
+      "id": "3f982a23-cbeb-4cab-aaed-d4c0a14e11cf",
+      "comment": "",
+      "command": "type",
+      "target": "id=input1",
+      "targets": [],
+      "value": "${testCase.input1}"
+    }, {
+      "id": "d687873d-3ed4-4b2e-9d9e-16e2d77cfda8",
+      "comment": "",
+      "command": "type",
+      "target": "id=input2",
+      "targets": [],
+      "value": "${testCase.input2}"
+    }, {
+      "id": "74c275dc-539b-43e8-aae7-f7fef150f69f",
+      "comment": "",
+      "command": "select",
+      "target": "id=operation",
+      "targets": [],
+      "value": "value=${testCase.operation}"
+    }, {
+      "id": "d602605a-4e10-4073-8015-27a068ae536a",
+      "comment": "",
+      "command": "click",
+      "target": "//button[text()='Calculate']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68f1e8d3-8224-4e8a-b2ab-396e398b53d3",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=result",
+      "targets": [],
+      "value": "actualResult"
+    }, {
+      "id": "a3580923-8664-4d3b-b5df-3f857c10b13f",
+      "comment": "",
+      "command": "if",
+      "target": "${actualResult} != ${testCase.expected}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8bb0597-448e-47f9-b63f-963a2dba94b1",
+      "comment": "",
+      "command": "echo",
+      "target": "❌ ${testCase.id} failed. Expected: ${testCase.expected}, Got: ${actualResult}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c49221a6-c494-4a39-a149-7e4b5add61d7",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5e1fa3f-6dba-4ac1-9114-c8bb5061726d",
+      "comment": "",
+      "command": "echo",
+      "target": "✅ ${testCase.id} passed.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22d284d8-da35-450d-af26-2d1fc7402f26",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9c83d10-681f-411a-87ea-0b24fa7c2d85",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "suite1",
+    "name": "Main Suite",
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["calculator-test"]
+  }],
+  "urls": ["http://localhost/", "https://yekoshy.github.io/SimpleCalc/"],
+  "plugins": []
+}
