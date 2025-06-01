@@ -1,0 +1,257 @@
+{
+  "id": "04fd91e6-fb4a-4549-9b95-45b25f307d4a",
+  "version": "2.0",
+  "name": "Login Tests Suite",
+  "url": "https://moatazeldebsy.github.io/test-automation-practices/#/auth",
+  "tests": [{
+    "id": "tc01",
+    "name": "TC01 - Valid Login",
+    "commands": [{
+      "id": "8a162f71-b842-47ed-89bb-1f3a15740c53",
+      "comment": "",
+      "command": "open",
+      "target": "https://moatazeldebsy.github.io/test-automation-practices/#/auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5ca584b-7bea-40a6-8043-9d31e50d715a",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"username-input\"]",
+      "targets": [],
+      "value": "admin"
+    }, {
+      "id": "e58e349c-99bf-4ac4-af54-f378cf6442f4",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"password-input\"]",
+      "targets": [],
+      "value": "admin"
+    }, {
+      "id": "f887c0a4-cd7f-48a6-9cb2-74bf8bb4efc1",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-test=\"login-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd94d7ea-bd71-4519-b99c-1b215acf708d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-xl.font-semibold.text-green-800",
+      "targets": [],
+      "value": "Successfully authenticated!"
+    }]
+  }, {
+    "id": "tc02",
+    "name": "TC02 - Invalid Credentials",
+    "commands": [{
+      "id": "a7a89967-ab3e-4949-a133-80925760dc41",
+      "comment": "",
+      "command": "open",
+      "target": "https://moatazeldebsy.github.io/test-automation-practices/#/auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5ca4b16-2ae6-4a68-beda-bac85c94805e",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"username-input\"]",
+      "targets": [],
+      "value": "hend"
+    }, {
+      "id": "e8ff0e6e-7181-4911-8d6d-4f5a7fe35b4a",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"password-input\"]",
+      "targets": [],
+      "value": "hend123"
+    }, {
+      "id": "ed4ae5d6-b4c3-4be8-a1ac-1d8e571fa84a",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-test=\"login-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5de6043d-8b75-482b-aa5a-ea8aefcc7cf9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-test=\"auth-error\"]",
+      "targets": [],
+      "value": "Invalid username or password"
+    }]
+  }, {
+    "id": "tc03",
+    "name": "TC03 - Empty Fields",
+    "commands": [{
+      "id": "7d58ad03-5649-4401-ada7-51decd927184",
+      "comment": "",
+      "command": "open",
+      "target": "https://moatazeldebsy.github.io/test-automation-practices/#/auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a74ea822-a023-4c7e-83f0-fb44eb7a0417",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"username-input\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d227ce94-25d6-445e-a4e1-64fc87f708c4",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"password-input\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dad090c4-c7a0-4072-88e9-3e1c4bd88e96",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-test=\"login-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c672a0fb-c76a-444a-8869-10cb9063e578",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-test=\"auth-error\"]",
+      "targets": [],
+      "value": "Invalid username or password"
+    }]
+  }, {
+    "id": "tc04",
+    "name": "TC04 - Empty Password",
+    "commands": [{
+      "id": "8773b026-f957-40ae-aa44-88ed2e56b290",
+      "comment": "",
+      "command": "open",
+      "target": "https://moatazeldebsy.github.io/test-automation-practices/#/auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f55f6a6-b0b8-4cbf-93e4-0aa2cb09860c",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"username-input\"]",
+      "targets": [],
+      "value": "admin"
+    }, {
+      "id": "72c652df-b141-414e-aa8f-fe6e285c7332",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"password-input\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84329ec7-e254-4bff-bf41-837bae4f3344",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-test=\"login-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d73ba769-a2ab-4014-b81d-7b7d95289fb1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-test=\"auth-error\"]",
+      "targets": [],
+      "value": "Invalid username or password"
+    }]
+  }, {
+    "id": "tc05",
+    "name": "TC05 - Empty Username",
+    "commands": [{
+      "id": "2ee72ac6-f33b-4152-be40-71c302c988a3",
+      "comment": "",
+      "command": "open",
+      "target": "https://moatazeldebsy.github.io/test-automation-practices/#/auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdff323e-91ff-4d6e-8619-388f57228f96",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"username-input\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c5028ec-1574-4dcc-994b-49eb0485f301",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"password-input\"]",
+      "targets": [],
+      "value": "admin"
+    }, {
+      "id": "4da97d26-9f44-422e-9288-5c13d9140537",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-test=\"login-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57ee9afc-8f26-4ab6-905f-e1b0cb4319d5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-test=\"auth-error\"]",
+      "targets": [],
+      "value": "Invalid username or password"
+    }]
+  }, {
+    "id": "tc06",
+    "name": "TC06 - Login with Long Input",
+    "commands": [{
+      "id": "ab706224-11da-4c8c-998b-3717bdcb99f8",
+      "comment": "",
+      "command": "open",
+      "target": "https://moatazeldebsy.github.io/test-automation-practices/#/auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b5a76ef-84c0-4d19-8031-1a1fe9605416",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"username-input\"]",
+      "targets": [],
+      "value": "hflhfhrnfm"
+    }, {
+      "id": "e9443ddf-f724-4c34-9dd2-e6000e989665",
+      "comment": "",
+      "command": "type",
+      "target": "css=[data-test=\"password-input\"]",
+      "targets": [],
+      "value": "7436756578jf"
+    }, {
+      "id": "e692f015-11da-4ff0-8c21-68ab4c0a1411",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-test=\"login-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7b7f2a7-5e22-4fdd-8512-e358c15bb002",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-test=\"auth-error\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "02110916-ceb4-4ad7-b17a-b816dfd1ece3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-test=\"auth-error\"]",
+      "targets": [],
+      "value": "Invalid username or password"
+    }]
+  }],
+  "suites": [{
+    "id": "suite1",
+    "name": "Login Tests Suite",
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["tc01", "tc02", "tc03", "tc04", "tc05", "tc06"]
+  }],
+  "urls": ["https://moatazeldebsy.github.io/test-automation-practices/#/auth"],
+  "plugins": []
+}
