@@ -1,0 +1,80 @@
+function enterInput(field, value) {
+  const input = document.querySelector(`[data-test="${field}-input"]`);
+  if (input) {
+    input.value = value;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+}
+
+function clickButton() {
+  const btn = document.querySelector('[data-test="login-button"]');
+  if (btn) btn.click();
+}
+
+function enterUsernameInput(value) {
+  enterInput("username", value);
+}
+
+function enterPasswordInput(value) {
+  enterInput("password", value);
+}
+
+function login(username, password) {
+  enterUsernameInput(username);
+  enterPasswordInput(password);
+  clickButton();
+}
+
+function getMessage() {
+  const errorEl = document.querySelector('[data-test="auth-error"]');
+  if (errorEl) return errorEl.innerText.trim();
+  const successEl = document.querySelector('.text-xl.font-semibold.text-green-800');
+  return successEl ? successEl.innerText.trim() : null;
+}
+
+function waitForMessage(timeout = 5000) {
+  return new Promise((resolve) => {
+    const start = Date.now();
+    const interval = setInterval(() => {
+      const msg = getMessage();
+      if (msg) {
+        clearInterval(interval);
+        resolve(msg);
+      } else if (Date.now() - start > timeout) {
+        clearInterval(interval);
+        resolve(null);
+      }
+    }, 5000);
+  });
+}
+
+const loginTestCases = [
+  { id: "TC01", title: "Valid Login", username: "admin", password: "admin", expected: "Successfully authenticated!" },
+  { id: "TC02", title: "Invalid Credentials", username: "hend", password: "hend123", expected: "Invalid username or password" },
+  { id: "TC03", title: "Empty Fields", username: "", password: "", expected: "Invalid username or password" },
+  { id: "TC04", title: "Empty Password", username: "admin", password: "", expected: "Invalid username or password" },
+  { id: "TC05", title: "Empty Username", username: "", password: "admin", expected: "Invalid username or password" },
+  { id: "TC06", title: "Login with Long Input", username: "hflhfhrnfm", password: "7436756578jf", expected: "Invalid username or password" },
+  { id: "TC01", title: "Valid Login", username: "admin", password: "admin", expected: "Successfully authenticated!" },
+];
+
+
+async function runTests() {
+  for (const testCase of loginTestCases) {
+    login(testCase.username, testCase.password);
+    const result = await waitForMessage();
+    console.log(`Test ${testCase.id} (${testCase.title}) got message: "${result}"`);
+    console.assert(
+      result === testCase.expected,
+      `Test ${testCase.id} (${testCase.title}) failed: expected "${testCase.expected}", got "${result}"`
+    );
+    if (result === testCase.expected) {
+      console.log(` Test ${testCase.id} (${testCase.title}) passed.`);
+    } else {
+      console.error(` Test ${testCase.id} (${testCase.title}) failed.`);
+    }
+  }
+}
+runTests();
+
+
