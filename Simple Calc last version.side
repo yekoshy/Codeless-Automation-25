@@ -1,0 +1,399 @@
+{
+  "id": "5745bb86-985e-4293-8fe8-60ffdefc83d8",
+  "version": "2.0",
+  "name": "03.06.2024",
+  "url": "https://demo.seleniumeasy.com/basic-select-dropdown-demo.html",
+  "tests": [{
+    "id": "0b6e4f9f-ed57-4eff-b67f-e2d947701c5e",
+    "name": "Calc - basic",
+    "commands": [{
+      "id": "009cd54b-f122-46d9-8016-7a1f01113a35",
+      "comment": "",
+      "command": "open",
+      "target": "https://testpages.eviltester.com/styled/calculator",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c73012d-a99e-4dcc-b29b-49558e29661e",
+      "comment": "",
+      "command": "type",
+      "target": "id=number1",
+      "targets": [
+        ["id=number1", "id"],
+        ["name=number1", "name"],
+        ["css=#number1", "css:finder"],
+        ["xpath=//input[@id='number1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${number1}"
+    }, {
+      "id": "a2f0780b-2414-46ba-a865-48a209c0ecad",
+      "comment": "",
+      "command": "select",
+      "target": "id=function",
+      "targets": [],
+      "value": "label=${op}"
+    }, {
+      "id": "b792feb5-e29c-44aa-ba3a-3de162a38bf8",
+      "comment": "",
+      "command": "type",
+      "target": "id=number2",
+      "targets": [
+        ["id=number2", "id"],
+        ["name=number2", "name"],
+        ["css=#number2", "css:finder"],
+        ["xpath=//input[@id='number2']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${number2}"
+    }, {
+      "id": "7f172c71-d018-420c-acdd-02f768295646",
+      "comment": "",
+      "command": "click",
+      "target": "id=calculate",
+      "targets": [
+        ["id=calculate", "id"],
+        ["css=#calculate", "css:finder"],
+        ["xpath=//input[@id='calculate']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aebb9324-9360-421b-ae18-56243413313c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=answer",
+      "targets": [],
+      "value": "${expected}"
+    }]
+  }, {
+    "id": "c52e4141-dcda-4e15-9a8a-be5b5850bed0",
+    "name": "Calc - foreach OP",
+    "commands": [{
+      "id": "808d5825-aebb-4fcb-9786-88f11e659949",
+      "comment": "",
+      "command": "open",
+      "target": "https://testpages.eviltester.com/styled/calculator",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d297674d-2049-450b-a799-98c6ec2977a5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['plus','minus','times','divide'];",
+      "targets": [],
+      "value": "ops"
+    }, {
+      "id": "fbc30556-8bb4-442c-9aad-3869c760975f",
+      "comment": "",
+      "command": "forEach",
+      "target": "ops",
+      "targets": [],
+      "value": "myOp"
+    }, {
+      "id": "e736cd6d-8a9a-4ba6-ab0d-55237e3e39d0",
+      "comment": "",
+      "command": "echo",
+      "target": "${myOp}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "014ecc7c-3ee2-49aa-818d-283d0999ae30",
+      "comment": "",
+      "command": "echo",
+      "target": "First testcase with random numbers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67360f8a-6119-4bd7-a0c8-59c7d47f3bd4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let num1 = Math.random() * 100;  return num1.toFixed(5);",
+      "targets": [],
+      "value": "number1"
+    }, {
+      "id": "f85bb68a-2f87-490d-82af-2f4fb593830c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let num1 = Math.random() * 100;  return num1.toFixed(5);",
+      "targets": [],
+      "value": "number2"
+    }, {
+      "id": "6a55ee2d-1acb-457e-a70b-e0a37572e42c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let num; switch(${myOp}) {   case 'plus':     num = Number(${number1}) + Number(${number2}); \treturn num.toFixed(5);      break;   case 'minus':      num = Number(${number1}) - Number(${number2}); \treturn num.toFixed(5);     break;   case 'divide':      num = Number(${number1}) / Number(${number2}); \treturn num.toFixed(5);      break; \tcase 'times':      num = Number(${number1}) * Number(${number2}); \treturn num.toFixed(5);     break; }",
+      "targets": [],
+      "value": "expected"
+    }, {
+      "id": "3d2efc89-a1d9-4a39-a1de-f5fc7a1006ee",
+      "comment": "",
+      "command": "store",
+      "target": "${myOp}",
+      "targets": [],
+      "value": "op"
+    }, {
+      "id": "a8cfa4c3-6943-4c82-83b6-ec8d6135a80e",
+      "comment": "",
+      "command": "run",
+      "target": "Calc - basic",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce70d0a0-8db8-40ac-9be5-467f7a844326",
+      "comment": "",
+      "command": "echo",
+      "target": "Second Testcase with letter",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5488f52-9aa9-4588-8dd5-3bd8fc8b9bc5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let num1 = Math.random() * 100;  return num1.toFixed(5);",
+      "targets": [],
+      "value": "number1"
+    }, {
+      "id": "52c10953-a2e8-403f-8ba9-30343a9dfc71",
+      "comment": "",
+      "command": "store",
+      "target": "a",
+      "targets": [],
+      "value": "number2"
+    }, {
+      "id": "d0bcc93d-ec3c-49f0-98e5-731e870c5798",
+      "comment": "",
+      "command": "store",
+      "target": "ERR",
+      "targets": [],
+      "value": "expected"
+    }, {
+      "id": "e10e3e15-5a2c-4caf-bab9-5def5ed293bb",
+      "comment": "",
+      "command": "store",
+      "target": "${myOp}",
+      "targets": [],
+      "value": "op"
+    }, {
+      "id": "c2a9f806-3c38-481f-b81d-5ab3ad657a48",
+      "comment": "",
+      "command": "run",
+      "target": "Calc - basic",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "faca9559-8adf-4459-89a8-2950280ed618",
+      "comment": "",
+      "command": "echo",
+      "target": "Third Testcase with special char",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c0d3368-68b4-424b-b037-0743b52432dc",
+      "comment": "",
+      "command": "store",
+      "target": "$",
+      "targets": [],
+      "value": "number1"
+    }, {
+      "id": "50a662c3-62a5-4109-a72f-d36893613b91",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let num1 = Math.random() * 100;  return num1.toFixed(5);",
+      "targets": [],
+      "value": "number2"
+    }, {
+      "id": "5f9bfed0-2821-4763-81e4-2fb8bb685240",
+      "comment": "",
+      "command": "store",
+      "target": "ERR",
+      "targets": [],
+      "value": "expected"
+    }, {
+      "id": "b88e6e9e-6fd0-4e28-a1a1-41d7e470f109",
+      "comment": "",
+      "command": "store",
+      "target": "${myOp}",
+      "targets": [],
+      "value": "op"
+    }, {
+      "id": "7651372c-6e0a-470a-a25b-94e2c107dbfd",
+      "comment": "",
+      "command": "run",
+      "target": "Calc - basic",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b5160d7-4c48-4f39-af2a-c6ab236689dd",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4fb34c73-4d2c-4dbe-8dfa-6cadf15fe691",
+    "name": "Multi Select List",
+    "commands": [{
+      "id": "ba13b3c9-472e-4807-b68a-6dea732451fa",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.seleniumeasy.com/basic-select-dropdown-demo.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b0299c1-9194-481b-b44c-2145a73ed3d8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "728x714",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5e0e5d5-da79-472f-97a7-6db30b2e377f",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=multi-select",
+      "targets": [
+        ["id=multi-select", "id"],
+        ["name=States", "name"],
+        ["css=#multi-select", "css:finder"],
+        ["xpath=//select[@id='multi-select']", "xpath:attributes"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/select", "xpath:position"]
+      ],
+      "value": "label=California"
+    }, {
+      "id": "bb778049-f8a5-4bc2-b9b7-f13c593288eb",
+      "comment": "",
+      "command": "executeScript",
+      "target": " document.querySelector(\"option[value='California']\").dispatchEvent(new MouseEvent('click'))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "027513a8-03d8-4cc0-8642-b97b7051a82b",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=multi-select",
+      "targets": [
+        ["id=multi-select", "id"],
+        ["name=States", "name"],
+        ["css=#multi-select", "css:finder"],
+        ["xpath=//select[@id='multi-select']", "xpath:attributes"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/select", "xpath:position"]
+      ],
+      "value": "label=New Jersey"
+    }, {
+      "id": "073396d5-7988-4b15-9a64-e33aa8a32665",
+      "comment": "",
+      "command": "executeScript",
+      "target": " document.querySelector(\"option[value='New Jersey']\").dispatchEvent(new MouseEvent('click',{ctrlKey: true }))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e8e6774-6568-46c3-b366-b9a96475067f",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=multi-select",
+      "targets": [
+        ["id=multi-select", "id"],
+        ["name=States", "name"],
+        ["css=#multi-select", "css:finder"],
+        ["xpath=//select[@id='multi-select']", "xpath:attributes"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/select", "xpath:position"]
+      ],
+      "value": "label=Ohio"
+    }, {
+      "id": "ebac9060-df6c-4308-b051-52e35a9c07d2",
+      "comment": "",
+      "command": "executeScript",
+      "target": " document.querySelector(\"option[value='Ohio']\").dispatchEvent(new MouseEvent('click',{ctrlKey: true }))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57c70e86-ca03-4891-a01c-c3bd6527941d",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=multi-select",
+      "targets": [
+        ["id=multi-select", "id"],
+        ["name=States", "name"],
+        ["css=#multi-select", "css:finder"],
+        ["xpath=//select[@id='multi-select']", "xpath:attributes"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/select", "xpath:position"]
+      ],
+      "value": "label=Texas"
+    }, {
+      "id": "98773df4-7344-4491-b70a-9f02de66011e",
+      "comment": "",
+      "command": "executeScript",
+      "target": " document.querySelector(\"option[value='Texas']\").dispatchEvent(new MouseEvent('click',{ctrlKey: true }))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00845b59-458c-46d0-9df3-2c7746a7ec0e",
+      "comment": "",
+      "command": "click",
+      "target": "id=printMe",
+      "targets": [
+        ["id=printMe", "id"],
+        ["css=#printMe", "css:finder"],
+        ["xpath=//button[@id='printMe']", "xpath:attributes"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'First Selected')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e55263d-0c09-4e19-9174-2606bba4377d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.getall-selected",
+      "targets": [
+        ["css=.getall-selected", "css:finder"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/p[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'First selected option is : California')]", "xpath:innerText"]
+      ],
+      "value": "First selected option is : California"
+    }, {
+      "id": "5b219a60-eea7-4f85-932c-8f575437b8df",
+      "comment": "",
+      "command": "click",
+      "target": "id=printAll",
+      "targets": [
+        ["id=printAll", "id"],
+        ["css=#printAll", "css:finder"],
+        ["xpath=//button[@id='printAll']", "xpath:attributes"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Get All Selected')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53bd6ffa-8eb1-4f21-aca4-c80da589d9e5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.getall-selected",
+      "targets": [
+        ["css=.getall-selected", "css:finder"],
+        ["xpath=//div[@id='easycont']/div/div[2]/div[2]/div[2]/p[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Options selected are : California,New Jersey,Ohio,Texas')]", "xpath:innerText"]
+      ],
+      "value": "Options selected are : California,New Jersey,Ohio,Texas"
+    }]
+  }],
+  "suites": [{
+    "id": "cbdeaa04-1179-4d3a-a55b-0ee40f7e35cf",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://testpages.eviltester.com/styled/calculator", "https://demo.seleniumeasy.com/basic-select-dropdown-demo.html"],
+  "plugins": []
+}
