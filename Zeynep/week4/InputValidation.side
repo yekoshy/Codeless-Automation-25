@@ -1,0 +1,190 @@
+{
+  "id": "19430a15-01be-40db-820c-f2d3fb3b11e6",
+  "version": "2.0",
+  "name": "abc",
+  "url": "https://testpages.eviltester.com/styled/validation/input-validation.html",
+  "tests": [{
+    "id": "4a66ef48-5c9b-452a-b139-e32bb979f31d",
+    "name": "TEST_InputValidation_Positives",
+    "commands": [{
+      "id": "3e535f37-5625-4d18-a38b-818f05b8456f",
+      "comment": "",
+      "command": "open",
+      "target": "https://testpages.eviltester.com/styled/validation/input-validation.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e92011f-a32e-4477-9784-04ada1858b85",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1470x846",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b17bc8c-429f-4b1e-9a68-67ee694e31da",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [ {fname: \"Evelyn\", sname: \"Andersonssa\", age: 22, country: \"Germany\", notes: \"Test1\"},  {fname: \"Avery\", sname: \"Brownstones\", age: 33, country: \"Cabo Verde\", notes: \"Test2\"}, {fname: \"Maria\", sname: \"Johnsonsons\", age: 44, country: \"Germany\", notes: \"Test3\"}, {fname: \"Leonard\", sname: \"Fitzgeralds\", age: 55, country: \"Andorra\", notes: \"Test4\"}, {fname: \"Samuel\", sname: \"Montgomerya\", age: 66, country: \"Turkey\", notes: \"Test5\"} ]",
+      "targets": [],
+      "value": "inputs"
+    }, {
+      "id": "103ed23d-2e01-4162-94d7-0bc491dadccb",
+      "comment": "",
+      "command": "forEach",
+      "target": "inputs",
+      "targets": [],
+      "value": "input"
+    }, {
+      "id": "32507b88-21c6-4793-9a53-d1aabf46c177",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${input.fname}"
+    }, {
+      "id": "cb0209e8-fff1-42ea-ae29-bb156732482a",
+      "comment": "",
+      "command": "//click",
+      "target": "id=surname",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e2f1603-1da3-49d3-ab72-8ea1eae42163",
+      "comment": "",
+      "command": "type",
+      "target": "id=surname",
+      "targets": [
+        ["id=surname", "id"],
+        ["name=surname", "name"],
+        ["css=#surname", "css:finder"],
+        ["xpath=//input[@id='surname']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${input.sname}"
+    }, {
+      "id": "89af7b05-c637-40cf-a9c0-ed4763a9fd74",
+      "comment": "",
+      "command": "//click",
+      "target": "id=age",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7584dab8-7bab-4e91-97bc-87590b3d7ff6",
+      "comment": "",
+      "command": "type",
+      "target": "id=age",
+      "targets": [
+        ["id=age", "id"],
+        ["name=age", "name"],
+        ["css=#age", "css:finder"],
+        ["xpath=//input[@id='age']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${input.age}"
+    }, {
+      "id": "bdcd2a9a-4d72-440e-bad1-8c8039de3ef4",
+      "comment": "",
+      "command": "//click",
+      "target": "id=country",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47f21b07-e9bb-40e6-8b55-888b4b9bfadf",
+      "comment": "",
+      "command": "select",
+      "target": "id=country",
+      "targets": [],
+      "value": "label=Albania"
+    }, {
+      "id": "a6a04b24-9ac7-482b-b75d-83203f01e8e4",
+      "comment": "",
+      "command": "//click",
+      "target": "id=notes",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31733394-4a24-4a9e-aa7f-b3c0510d9868",
+      "comment": "",
+      "command": "type",
+      "target": "id=notes",
+      "targets": [
+        ["id=notes", "id"],
+        ["name=notes", "name"],
+        ["css=#notes", "css:finder"],
+        ["xpath=//textarea[@id='notes']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${input.notes}"
+    }, {
+      "id": "45b62eca-957e-4b31-a525-78241ea911cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(31)",
+      "targets": [
+        ["css=input:nth-child(31)", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "530d69b8-c747-4faf-adf0-e1455e04c83e",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=valid-input-value",
+      "targets": [
+        ["id=valid-input-value", "id"],
+        ["css=#valid-input-value", "css:finder"],
+        ["xpath=//li[@id='valid-input-value']", "xpath:attributes"],
+        ["xpath=//li[@id='valid-input']/ul/li", "xpath:idRelative"],
+        ["xpath=//li/ul/li", "xpath:position"]
+      ],
+      "value": "Your Input passed validation"
+    }, {
+      "id": "489fe7f1-507d-42fd-8365-116fcf96f859",
+      "comment": "",
+      "command": "click",
+      "target": "id=backtoform",
+      "targets": [
+        ["id=backtoform", "id"],
+        ["linkText=Back to Input Form", "linkText"],
+        ["css=#backtoform", "css:finder"],
+        ["xpath=//a[contains(text(),'Back to Input Form')]", "xpath:link"],
+        ["xpath=//a[@id='backtoform']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/styled/validation/input-validation.html')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Back to Input Form')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dca56934-0d22-4a2b-b5c8-d2a012a5c4bf",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e526002d-0d05-4145-b719-418aab834e97",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "52a55aa9-8b9b-41e9-ab9d-557661722254",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://demoqa.com/checkbox", "https://moatazeldebsy.github.io/test-automation-practices/#/forms", "https://moatazeldebsy.github.io/test-automation-practices/#/auth", "https://testpages.eviltester.com/styled/validation/input-validation.html"],
+  "plugins": []
+}
