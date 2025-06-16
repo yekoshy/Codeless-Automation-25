@@ -22,11 +22,11 @@ x.dispatchEvent(new KeyboardEvent('keyup',{code:'Space',key:' ',bubbles:true})) 
 example: https://demoqa.com/droppable <br>
 mouse down -> mouse move -> mouse move -> mouse up <br>
 x.dispatchEvent(new MouseEvent(type, {bubbles: true,cancelable: true,clientX: x,clientY: y,view: window}); <br>
-  const startX = srcRect.left + srcRect.width / 2;
-  const startY = srcRect.top + srcRect.height / 2;
+  const startX = srcRect.left + srcRect.width / 2; <br>
+  const startY = srcRect.top + srcRect.height / 2; <br>
   
-  const endX = tgtRect.left + tgtRect.width / 2;
-  const endY = tgtRect.top + tgtRect.height / 2;
+  const endX = tgtRect.left + tgtRect.width / 2; <br>
+  const endY = tgtRect.top + tgtRect.height / 2; <br>
 
   ![Rectangle Center](https://i.sstatic.net/0EtOb.png)
 
