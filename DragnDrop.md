@@ -1,28 +1,28 @@
-**HTML5 Drag and Drop Event Sequence**
-A standard drag and drop operation involves a series of specific DOM DragEvents:
+**HTML5 Drag and Drop Event Sequence** <br>
+A standard drag and drop operation involves a series of specific DOM DragEvents: <br>
 
-**Drag & Drop using DragEvent:**
-example: https://yekoshy.github.io/Drag-n-Drop/
-drag start -> drag over -> drop -> drag end 
+**Drag & Drop using DragEvent:** <br>
+example: https://yekoshy.github.io/Drag-n-Drop/ <br>
+drag start -> drag over -> drop -> drag end <br>
 
-draggable2.dispatchEvent(new DragEvent('dragstart',{bubbles:true,dataTransfer: dataTransfer}))
-droppable.dispatchEvent(new DragEvent('dragover', {bubbles:true,dataTransfer: dataTransfer}));
-droppable.dispatchEvent(new DragEvent('drop', {bubbles: true,dataTransfer: dataTransfer }));
-draggable2.dispatchEvent(new DragEvent('dragend', {bubbles: true,dataTransfer: dataTransfer}));
+draggable2.dispatchEvent(new DragEvent('dragstart',{bubbles:true,dataTransfer: dataTransfer})) <br>
+droppable.dispatchEvent(new DragEvent('dragover', {bubbles:true,dataTransfer: dataTransfer})); <br>
+droppable.dispatchEvent(new DragEvent('drop', {bubbles: true,dataTransfer: dataTransfer })); <br>
+draggable2.dispatchEvent(new DragEvent('dragend', {bubbles: true,dataTransfer: dataTransfer})); <br>
 
-**Drag & Drop event using Keyboard:**
-example: https://moatazeldebsy.github.io/test-automation-practices/#/drag-drop 
-Keydown space -> Keydown arrow down -> Keyup space
+**Drag & Drop event using Keyboard:** <br>
+example: https://moatazeldebsy.github.io/test-automation-practices/#/drag-drop <br>
+Keydown space -> Keydown arrow down -> Keyup space <br>
 
-x.dispatchEvent(new KeyboardEvent('keydown',{code:'Space',key:' ',bubbles:true}))
-x.dispatchEvent(new KeyboardEvent('keydown',{code:'ArrowDown',key:'ArrowDown',bubbles:true}))
-x.dispatchEvent(new KeyboardEvent('keyup',{code:'Space',key:' ',bubbles:true}))
+x.dispatchEvent(new KeyboardEvent('keydown',{code:'Space',key:' ',bubbles:true})) <br>
+x.dispatchEvent(new KeyboardEvent('keydown',{code:'ArrowDown',key:'ArrowDown',bubbles:true})) <br>
+x.dispatchEvent(new KeyboardEvent('keyup',{code:'Space',key:' ',bubbles:true})) <br>
 
-**Drag & Drop event using mouse:**
+**Drag & Drop event using mouse:** <br>
 
 
 
-**Drag & Drop using Selenium IDE:**
-Command: "drag and drop to object"
-example: https://testpages.eviltester.com/styled/drag-drop-javascript.html 
-example: https://demoqa.com/droppable
+**Drag & Drop using Selenium IDE:** <br>
+Command: "drag and drop to object" <br>
+example: https://testpages.eviltester.com/styled/drag-drop-javascript.html  <br>
+example: https://demoqa.com/droppable <br>
