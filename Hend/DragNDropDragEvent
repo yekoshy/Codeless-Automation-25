@@ -1,0 +1,34 @@
+const dragBox = document.querySelector('#drag1'); 
+const dropZone = document.querySelector('#drop1'); 
+
+
+dropZone.addEventListener('dragover', e => {
+  e.preventDefault();  
+});
+
+const dataTransfer = new DataTransfer();  
+dataTransfer.setData('text/plain', 'hend data');
+
+dragBox.dispatchEvent(new DragEvent('dragstart', {
+  bubbles: true,
+  cancelable: true,
+  dataTransfer: dataTransfer
+}));
+
+dropZone.dispatchEvent(new DragEvent('dragover', {
+  bubbles: true,
+  cancelable: true,
+  dataTransfer: dataTransfer
+}));
+
+dropZone.dispatchEvent(new DragEvent('drop', {
+  bubbles: true,
+  cancelable: true,
+  dataTransfer: dataTransfer
+}));
+
+dragBox.dispatchEvent(new DragEvent('dragend', {
+  bubbles: true,
+  cancelable: true,
+  dataTransfer: dataTransfer
+}));
