@@ -1,0 +1,168 @@
+{
+  "id": "4e294c61-229a-4ff6-8d20-15047d51312a",
+  "version": "2.0",
+  "name": "Drag&drop",
+  "url": "https://testpages.eviltester.com",
+  "tests": [{
+    "id": "e63135b8-532d-4dc2-b012-0214571b5203",
+    "name": "Happy",
+    "commands": [{
+      "id": "74d6c9a3-ce0b-4b84-9c6f-48afb28aaf25",
+      "comment": "",
+      "command": "store",
+      "target": "draggable1",
+      "targets": [],
+      "value": "first_item"
+    }, {
+      "id": "66d021e3-c684-48b1-877c-e2f841bfb265",
+      "comment": "",
+      "command": "store",
+      "target": "draggable2",
+      "targets": [],
+      "value": "second_item"
+    }, {
+      "id": "b1f49d1e-fedd-4cb1-b42f-ee92739ef6e9",
+      "comment": "",
+      "command": "store",
+      "target": "Dropped!",
+      "targets": [],
+      "value": "first_msg"
+    }, {
+      "id": "87d1b700-31cb-4bd4-a0d9-a38c34ee0c85",
+      "comment": "",
+      "command": "run",
+      "target": "Basic",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "14800288-1b42-4b48-90b8-7f757eebef08",
+    "name": "Wrong_Drop",
+    "commands": [{
+      "id": "fe97ab7f-7f1a-41e7-9d44-8781d6383cf8",
+      "comment": "",
+      "command": "store",
+      "target": "draggable2",
+      "targets": [],
+      "value": "first_item"
+    }, {
+      "id": "46fa0571-3343-4aed-a57d-4d14246b6238",
+      "comment": "",
+      "command": "store",
+      "target": "draggable1",
+      "targets": [],
+      "value": "second_item"
+    }, {
+      "id": "6b56d992-219f-4698-b292-ea634a945897",
+      "comment": "",
+      "command": "store",
+      "target": "Get Off Me!",
+      "targets": [],
+      "value": "first_msg"
+    }, {
+      "id": "e539de66-c435-4cad-830e-d8702578c6fa",
+      "comment": "",
+      "command": "run",
+      "target": "Basic",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f8cd6ca1-fdd8-4362-9c68-6b00e556e52f",
+    "name": "Basic",
+    "commands": [{
+      "id": "9048098f-437c-4f0e-b391-93ce998e8ceb",
+      "comment": "",
+      "command": "echo",
+      "target": "${first_item}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74b7a821-f2d4-4c0b-aa16-df3248911288",
+      "comment": "",
+      "command": "echo",
+      "target": "${second_item}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bc50b7b-8388-43da-80f2-0be2be187e12",
+      "comment": "",
+      "command": "open",
+      "target": "/styled/drag-drop-javascript.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbd0dcb4-78b8-454a-8b4b-d98fd330b7f0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#droppable1 > p",
+      "targets": [
+        ["css=#droppable1 > p", "css:finder"],
+        ["xpath=//div[@id='droppable1']/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Drop here')]", "xpath:innerText"]
+      ],
+      "value": "Drop here"
+    }, {
+      "id": "5829d5f5-35ea-42e1-ba61-0676d9fd76cd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#droppable2 > p",
+      "targets": [
+        ["css=#droppable2 > p", "css:finder"],
+        ["xpath=//div[@id='droppable2']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'No Drop here')]", "xpath:innerText"]
+      ],
+      "value": "No Drop here"
+    }, {
+      "id": "51e87c8c-765e-4e11-8af6-04e8c11649d0",
+      "comment": "",
+      "command": "dragAndDropToObject",
+      "target": "id=${first_item}",
+      "targets": [],
+      "value": "id=droppable1"
+    }, {
+      "id": "b8880076-fb9f-4da8-923b-1df2e83442e1",
+      "comment": "",
+      "command": "dragAndDropToObject",
+      "target": "id=${second_item}",
+      "targets": [],
+      "value": "id=droppable2"
+    }, {
+      "id": "6e64bbb5-c37e-432e-a6f0-a98c94d38f59",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#droppable1 > p",
+      "targets": [
+        ["css=#droppable1 > p", "css:finder"],
+        ["xpath=//div[@id='droppable1']/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Drop here')]", "xpath:innerText"]
+      ],
+      "value": "${first_msg}"
+    }, {
+      "id": "0825eb13-d751-463b-be6c-b91565941927",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#droppable2 > p",
+      "targets": [
+        ["css=#droppable2 > p", "css:finder"],
+        ["xpath=//div[@id='droppable2']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'No Drop here')]", "xpath:innerText"]
+      ],
+      "value": "Dropped!"
+    }]
+  }],
+  "suites": [{
+    "id": "fa5ffff2-574b-44b2-a77c-3f0154fe6d05",
+    "name": "Drag-n-Drop",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e63135b8-532d-4dc2-b012-0214571b5203", "14800288-1b42-4b48-90b8-7f757eebef08", "f8cd6ca1-fdd8-4362-9c68-6b00e556e52f"]
+  }],
+  "urls": ["https://testpages.eviltester.com/"],
+  "plugins": []
+}
