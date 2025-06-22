@@ -1,0 +1,33 @@
+const dragBox = document.querySelector("#draggable")
+const dropBox = document.querySelector("#droppable")
+ 
+function simulateDragAndDrop(srcRect, tgtRect) {
+  const startX = srcRect.left + srcRect.width / 2;
+  const startY = srcRect.top + srcRect.height / 2;
+
+  const endX = tgtRect.left + tgtRect.width / 2;
+  const endY = tgtRect.top + tgtRect.height / 2;
+
+  const dispatch = (type, x, y, target) => {
+    const evt = new MouseEvent(type, {
+      bubbles: true,
+      cancelable: true,
+      clientX: x,
+      clientY: y,
+      view: window
+    });
+    target.dispatchEvent(evt);
+  };
+
+  const srcElem = document.elementFromPoint(startX, startY);
+  const tgtElem = document.elementFromPoint(endX, endY);
+
+ 
+
+  dispatch('mousedown', startX, startY, srcElem);
+  dispatch('mousemove', endX, endY, srcElem);
+  dispatch('mouseup', endX, endY, tgtElem);
+
+}
+
+simulateDragAndDrop(dragBox.getBoundingClientRect(), dropBox.getBoundingClientRect());
