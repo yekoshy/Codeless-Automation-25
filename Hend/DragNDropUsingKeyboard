@@ -1,0 +1,35 @@
+const item = document.querySelector("#root > div > div.flex-1.md\\:ml-64.pt-16.md\\:pt-0 > main > div > div.space-y-2 > div:nth-child(2) > button > svg")
+async function simulateKeyboardDrag(item) {
+  item.focus();
+
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+  item.dispatchEvent(new KeyboardEvent('keydown', {
+    code: 'Space',
+    key: ' ',
+    bubbles: true,
+  }));
+  await wait(100);
+
+  item.dispatchEvent(new KeyboardEvent('keydown', {
+    code: 'ArrowDown',
+    key: 'ArrowDown',
+    bubbles: true,
+  }));
+  await wait(100);
+
+  item.dispatchEvent(new KeyboardEvent('keyup', {
+    code: 'ArrowDown',
+    key: 'ArrowDown',
+    bubbles: true,
+  }));
+  await wait(100);
+
+  item.dispatchEvent(new KeyboardEvent('keyup', {
+    code: 'Space',
+    key: ' ',
+    bubbles: true,
+  }));
+}
+
+simulateKeyboardDrag(item);
