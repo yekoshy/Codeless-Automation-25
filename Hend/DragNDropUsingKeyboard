@@ -19,7 +19,7 @@ async function simulateKeyboardDrag(item) {
   }));
   await wait(100);
 
-  item.dispatchEvent(new KeyboardEvent('keyup', {
+  item.dispatchEvent(new KeyboardEvent('keydown', {
     code: 'ArrowDown',
     key: 'ArrowDown',
     bubbles: true,
