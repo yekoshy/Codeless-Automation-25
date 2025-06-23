@@ -1,0 +1,169 @@
+{
+  "id": "96dadf53-e018-4a44-b912-88049af63a77",
+  "version": "2.0",
+  "name": "Upload",
+  "url": "https://testpages.eviltester.com/styled/file-upload-test.html",
+  "tests": [{
+    "id": "e72ce981-b4e5-4f98-b30d-cda9e855cf09",
+    "name": "Upload a file",
+    "commands": [{
+      "id": "00dbf77d-6fa6-45e2-9e51-4b014bb08505",
+      "comment": "",
+      "command": "open",
+      "target": "https://testpages.eviltester.com/styled/file-upload-test.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9ac4b27-d24a-4ed5-a465-986e9193ff04",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1082x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa598fd2-cca2-48d4-b6ff-c021608e4478",
+      "comment": "",
+      "command": "click",
+      "target": "id=fileinput",
+      "targets": [
+        ["id=fileinput", "id"],
+        ["name=filename", "name"],
+        ["css=#fileinput", "css:finder"],
+        ["xpath=//input[@id='fileinput']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2069a681-c87b-48d5-ae74-1b24483bd95e",
+      "comment": "",
+      "command": "type",
+      "target": "id=fileinput",
+      "targets": [
+        ["id=fileinput", "id"],
+        ["name=filename", "name"],
+        ["css=#fileinput", "css:finder"],
+        ["xpath=//input[@id='fileinput']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "C:\\Users\\yasmi\\Downloads\\sampleFile (4).jpeg"
+    }, {
+      "id": "d28acd7d-bbe0-43f2-a556-617c0ad94762",
+      "comment": "",
+      "command": "click",
+      "target": "id=itsanimage",
+      "targets": [
+        ["id=itsanimage", "id"],
+        ["name=filetype", "name"],
+        ["css=#itsanimage", "css:finder"],
+        ["xpath=//input[@id='itsanimage']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54b1f2f5-9774-49fd-822a-b08b85d9ad29",
+      "comment": "",
+      "command": "click",
+      "target": "name=upload",
+      "targets": [
+        ["name=upload", "name"],
+        ["css=.styled-click-button", "css:finder"],
+        ["xpath=//input[@name='upload']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52503151-0649-479e-87c9-fb09ca45f312",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.explanation > p",
+      "targets": [
+        ["css=.explanation > p", "css:finder"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'You uploaded a file. This is the result.')]", "xpath:innerText"]
+      ],
+      "value": "You uploaded a file. This is the result."
+    }, {
+      "id": "1cab7679-7332-442d-8d9d-17ee0388d0c3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'You uploaded this image:')]", "xpath:innerText"]
+      ],
+      "value": "You uploaded this image:"
+    }, {
+      "id": "c4cd2d78-5608-4d0e-97e0-20f366917e8e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Uploaded File')]", "xpath:innerText"]
+      ],
+      "value": "Uploaded File"
+    }, {
+      "id": "cf4db72b-b737-4198-a432-c973d80b80c8",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=uploadedfilename",
+      "targets": [
+        ["id=uploadedfilename", "id"],
+        ["css=#uploadedfilename", "css:finder"],
+        ["xpath=//p[@id='uploadedfilename']", "xpath:attributes"],
+        ["xpath=//div[3]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'sampleFile (4).jpeg')]", "xpath:innerText"]
+      ],
+      "value": "sampleFile (4).jpeg"
+    }, {
+      "id": "05be1dc7-c9cf-4e16-b127-3492e4711fb6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=goback",
+      "targets": [
+        ["id=goback", "id"],
+        ["css=#goback", "css:finder"],
+        ["xpath=//button[@id='goback']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload Another')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3946481-d983-4dae-98e5-4e12cc5f6d5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=goback",
+      "targets": [
+        ["id=goback", "id"],
+        ["css=#goback", "css:finder"],
+        ["xpath=//button[@id='goback']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload Another')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ccdfeb8-6ad5-4c06-bb64-1719faf7f3b1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Upload a File')]", "xpath:innerText"]
+      ],
+      "value": "Upload a File"
+    }]
+  }],
+  "suites": [{
+    "id": "e8bc91be-7f03-4b3f-9607-00705b0121ad",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e72ce981-b4e5-4f98-b30d-cda9e855cf09"]
+  }],
+  "urls": ["https://testpages.eviltester.com/styled/file-upload-test.html"],
+  "plugins": []
+}
