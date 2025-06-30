@@ -1,4 +1,5 @@
-const item = document.querySelector("#root > div > div.flex-1.md\\:ml-64.pt-16.md\\:pt-0 > main > div > div.space-y-2 > div:nth-child(2) > button > svg")
+//const item = document.querySelector("#root > div > div.flex-1.md\\:ml-64.pt-16.md\\:pt-0 > main > div > div.space-y-2 > div:nth-child(2) > button > svg")
+const item = document.querySelector('[data-test="drag-handle-Item 1"]')
 async function simulateKeyboardDrag(item) {
   item.focus();
 
@@ -18,7 +19,7 @@ async function simulateKeyboardDrag(item) {
   }));
   await wait(100);
 
-  item.dispatchEvent(new KeyboardEvent('keyup', {
+  item.dispatchEvent(new KeyboardEvent('keydown', {
     code: 'ArrowDown',
     key: 'ArrowDown',
     bubbles: true,
