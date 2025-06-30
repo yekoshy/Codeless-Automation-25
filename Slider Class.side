@@ -1,0 +1,138 @@
+{
+  "id": "109e76b0-2d96-42ee-bba7-3605912afb56",
+  "version": "2.0",
+  "name": "Slider Class",
+  "url": "https://yekoshy.github.io/EasySlider/",
+  "tests": [{
+    "id": "405fad53-9f66-461b-8cce-d4a3abdea808",
+    "name": "slider",
+    "commands": [{
+      "id": "dad74ea7-fe16-4a0b-8455-050e1556574e",
+      "comment": "",
+      "command": "open",
+      "target": "https://yekoshy.github.io/EasySlider/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cc40c76-c6f2-4ad2-b8c2-370367afd595",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1082x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f9bc718-7bf2-4cff-9ccc-45e85759de8a",
+      "comment": "",
+      "command": "type",
+      "target": "id=mySlider",
+      "targets": [
+        ["id=mySlider", "id"],
+        ["css=#mySlider", "css:finder"],
+        ["xpath=//input[@id='mySlider']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "085f7593-dafd-4686-8269-743d86c63b43",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector(\"#mySlider\").dispatchEvent(new Event('input',{bubbles:true}))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ac1d5f2-8217-455b-af49-68072ebeab52",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=sliderValueDisplay",
+      "targets": [
+        ["id=sliderValueDisplay", "id"],
+        ["css=#sliderValueDisplay", "css:finder"],
+        ["xpath=//span[@id='sliderValueDisplay']", "xpath:attributes"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'100')]", "xpath:innerText"]
+      ],
+      "value": "0"
+    }, {
+      "id": "833171d5-13f4-4f5e-b44b-87d718e1f8a4",
+      "comment": "",
+      "command": "type",
+      "target": "id=mySlider",
+      "targets": [
+        ["id=mySlider", "id"],
+        ["css=#mySlider", "css:finder"],
+        ["xpath=//input[@id='mySlider']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "50"
+    }, {
+      "id": "6ed028ed-a494-43f2-ae0d-ceb91ea12dd3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector(\"#mySlider\").dispatchEvent(new Event('input',{bubbles:true}))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4ed0e6a-27a0-4e9f-814a-93058c2fcc0b",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=sliderValueDisplay",
+      "targets": [
+        ["id=sliderValueDisplay", "id"],
+        ["css=#sliderValueDisplay", "css:finder"],
+        ["xpath=//span[@id='sliderValueDisplay']", "xpath:attributes"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'100')]", "xpath:innerText"]
+      ],
+      "value": "50"
+    }, {
+      "id": "4dfcb66d-4e6b-4fff-a2fe-8adebdd4eef6",
+      "comment": "",
+      "command": "type",
+      "target": "id=mySlider",
+      "targets": [
+        ["id=mySlider", "id"],
+        ["css=#mySlider", "css:finder"],
+        ["xpath=//input[@id='mySlider']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "100"
+    }, {
+      "id": "ab17de81-ee3f-4b85-b0a6-347e03cc6c74",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector(\"#mySlider\").dispatchEvent(new Event('input',{bubbles:true}))",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd9eb2d1-552d-45bf-ad11-5aa273cb1545",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=sliderValueDisplay",
+      "targets": [
+        ["id=sliderValueDisplay", "id"],
+        ["css=#sliderValueDisplay", "css:finder"],
+        ["xpath=//span[@id='sliderValueDisplay']", "xpath:attributes"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'100')]", "xpath:innerText"]
+      ],
+      "value": "100"
+    }, {
+      "id": "32ae379c-735d-44b4-936d-4e5346a63235",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "822fcafd-3054-404b-b5ae-95a0b77e49a9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["405fad53-9f66-461b-8cce-d4a3abdea808"]
+  }],
+  "urls": ["https://yekoshy.github.io/EasySlider/"],
+  "plugins": []
+}
