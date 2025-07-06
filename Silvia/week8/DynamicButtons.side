@@ -1,0 +1,276 @@
+{
+  "id": "8421154d-de09-4385-8f70-d365d64d6288",
+  "version": "2.0",
+  "name": "DynamicButtons",
+  "url": "https://testpages.eviltester.com",
+  "tests": [{
+    "id": "1bdc75a9-47e2-4211-84e0-240405928775",
+    "name": "Basic_recording",
+    "commands": [{
+      "id": "9c2eb00c-0b8a-4b5e-8ef8-1f700f80fe27",
+      "comment": "",
+      "command": "open",
+      "target": "/styled/dynamic-buttons-simple.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1111601b-d1f1-4a14-96a7-6e0bd70f5200",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "588x819",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53383234-a241-40b8-bad1-f9a166fe5b36",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=buttonmessage",
+      "targets": [
+        ["id=buttonmessage", "id"],
+        ["css=#buttonmessage", "css:finder"],
+        ["xpath=//p[@id='buttonmessage']", "xpath:attributes"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Click all 4 buttons.')]", "xpath:innerText"]
+      ],
+      "value": "Click all 4 buttons."
+    }, {
+      "id": "802b4e2c-b524-4693-b8e5-f7be0e04d51b",
+      "comment": "",
+      "command": "click",
+      "target": "id=button00",
+      "targets": [
+        ["id=button00", "id"],
+        ["css=#button00", "css:finder"],
+        ["xpath=//button[@id='button00']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'start')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15265f91-2ed0-4d1a-89cc-b535a2e2ed0f",
+      "comment": "",
+      "command": "click",
+      "target": "id=button01",
+      "targets": [
+        ["id=button01", "id"],
+        ["css=#button01", "css:finder"],
+        ["xpath=//button[@id='button01']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'One')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4d6d899-f64d-4264-b1ff-03080058de10",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=waitmessage",
+      "targets": [],
+      "value": "\"Wait...\""
+    }, {
+      "id": "e755fa90-e19d-4c4b-9d77-abb742396c62",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=button02",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9e293d94-8180-4622-820c-1842b904ab5e",
+      "comment": "",
+      "command": "click",
+      "target": "id=button02",
+      "targets": [
+        ["id=button02", "id"],
+        ["css=#button02", "css:finder"],
+        ["xpath=//button[@id='button02']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Two')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77a08114-582e-4a43-9d42-3a6f91af8f49",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=waitmessage",
+      "targets": [],
+      "value": "\"Wait...\""
+    }, {
+      "id": "1652f11f-a753-463b-a0f5-41426fd2ad2b",
+      "comment": "",
+      "command": "click",
+      "target": "id=button03",
+      "targets": [
+        ["id=button03", "id"],
+        ["css=#button03", "css:finder"],
+        ["xpath=//button[@id='button03']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Three')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae4e93d0-0a3a-4c9c-8d69-7995d06f9f5c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=buttonmessage",
+      "targets": [],
+      "value": "All Buttons Clicked"
+    }]
+  }, {
+    "id": "c860d161-11a8-4bb6-b6c4-53525b21c079",
+    "name": "Recorded",
+    "commands": [{
+      "id": "62e5d0c0-8e3c-4c18-bfe5-1b7b59c4ef4d",
+      "comment": "",
+      "command": "open",
+      "target": "/styled/dynamic-buttons-simple.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "938f0571-2207-41c1-9f67-846452442100",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "588x819",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7b108d7-db02-4160-80b3-e242f2f025d4",
+      "comment": "",
+      "command": "click",
+      "target": "id=buttonmessage",
+      "targets": [
+        ["id=buttonmessage", "id"],
+        ["css=#buttonmessage", "css:finder"],
+        ["xpath=//p[@id='buttonmessage']", "xpath:attributes"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Click all 4 buttons.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1482114a-09fb-43b8-a57e-03cc46d2ce86",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=buttonmessage",
+      "targets": [
+        ["id=buttonmessage", "id"],
+        ["css=#buttonmessage", "css:finder"],
+        ["xpath=//p[@id='buttonmessage']", "xpath:attributes"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Click all 4 buttons.')]", "xpath:innerText"]
+      ],
+      "value": "Click all 4 buttons."
+    }, {
+      "id": "70e0c2c8-18d6-4523-8d2c-2f89aafa52d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=button00",
+      "targets": [
+        ["id=button00", "id"],
+        ["css=#button00", "css:finder"],
+        ["xpath=//button[@id='button00']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'start')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69cf83f6-a893-47ab-86f4-7ded756cd613",
+      "comment": "",
+      "command": "//assertText",
+      "target": "id=waitmessage",
+      "targets": [],
+      "value": "\"\""
+    }, {
+      "id": "04833650-dc4f-4c2d-8b90-ce2be5fb779a",
+      "comment": "",
+      "command": "click",
+      "target": "id=button01",
+      "targets": [
+        ["id=button01", "id"],
+        ["css=#button01", "css:finder"],
+        ["xpath=//button[@id='button01']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'One')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "364f9fd6-2422-412a-9ba4-8c32df223620",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=waitmessage",
+      "targets": [
+        ["css=.page-body", "css:finder"],
+        ["xpath=//div[3]", "xpath:position"]
+      ],
+      "value": "Wait..."
+    }, {
+      "id": "98f48bdb-c7a7-4f4e-8261-99ef1625f83b",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e3b6e2b-9b73-4d5d-b351-0940cd859aa0",
+      "comment": "",
+      "command": "click",
+      "target": "id=button02",
+      "targets": [
+        ["id=button01", "id"],
+        ["css=#button01", "css:finder"],
+        ["xpath=//button[@id='button01']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'One')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7484d56f-dd46-4930-8255-8fa3dcaf1e81",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=waitmessage",
+      "targets": [],
+      "value": "Wait..."
+    }, {
+      "id": "afef4b84-17c4-4b88-8f49-235ddb9e3484",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0384be09-d8e5-40db-bf1c-d5fe7652fe19",
+      "comment": "",
+      "command": "click",
+      "target": "id=button03",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ac795c1-4899-49c7-a07b-58b623ea6c64",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=buttonmessage",
+      "targets": [
+        ["id=buttonmessage", "id"],
+        ["css=#buttonmessage", "css:finder"],
+        ["xpath=//p[@id='buttonmessage']", "xpath:attributes"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Click all 4 buttons.')]", "xpath:innerText"]
+      ],
+      "value": "All Buttons Clicked"
+    }]
+  }],
+  "suites": [{
+    "id": "2bc69492-3f22-4e6d-92ec-8f753102c245",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1bdc75a9-47e2-4211-84e0-240405928775"]
+  }],
+  "urls": ["https://testpages.eviltester.com/"],
+  "plugins": []
+}
