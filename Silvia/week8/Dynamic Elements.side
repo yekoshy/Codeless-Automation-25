@@ -1,0 +1,368 @@
+{
+  "id": "a1e9312c-33c1-4dc3-a8ac-dd2a2168bd3b",
+  "version": "2.0",
+  "name": "Dynamic Elements",
+  "url": "https://moatazeldebsy.github.io",
+  "tests": [{
+    "id": "9a4a16dc-2a32-4b88-8a59-df6a08c64504",
+    "name": "Basic_recording",
+    "commands": [{
+      "id": "06d7c001-a57c-48e2-92ef-cd6471630a0e",
+      "comment": "",
+      "command": "open",
+      "target": "/test-automation-practices/#/dynamic-elements",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "125804d4-ec3e-4d90-8410-07acb09bf5c2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5744d9dd-247a-4de4-b186-0ddb831fb810",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=div[data-test=\"loading-indicator\"]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9eea75b7-8018-4d85-b598-95fd153a46ec",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=*[data-test=\"content-area\"] ul",
+      "targets": [
+        ["css=*[data-test=\"content-area\"]", "css:data-attr"],
+        ["css=.min-h-\\[200px\\]", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17f39956-ac56-40da-85e9-19747afec523",
+      "comment": "",
+      "command": "type",
+      "target": "css=*[data-test=\"load-time-slider\"]",
+      "targets": [
+        ["css=*[data-test=\"load-time-slider\"]", "css:data-attr"],
+        ["css=.w-48", "css:finder"],
+        ["xpath=//input[@value='13']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "13"
+    }, {
+      "id": "6ee8a4b9-b5d2-46b3-80d3-1a61f9235779",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=*[data-test=\"load-time-value\"]",
+      "targets": [
+        ["css=*[data-test=\"load-time-value\"]", "css:data-attr"],
+        ["css=.flex > .text-gray-900", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'13s')]", "xpath:innerText"]
+      ],
+      "value": "13s"
+    }, {
+      "id": "bdfeb77a-d934-43e7-aae9-3df3eb51cc6c",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=*[data-test=\"content-area\"] ul",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f88d1bf0-4a0e-4251-b8ac-46f541b1a521",
+      "comment": "",
+      "command": "pause",
+      "target": "13000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee86278a-408c-4514-a818-db90da93d610",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=*[data-test=\"content-area\"] ul",
+      "targets": [
+        ["css=*[data-test=\"content-area\"]", "css:data-attr"],
+        ["css=.min-h-\\[200px\\]", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "53d3e346-02ac-41cd-aeed-6d6a8fc4459a",
+    "name": "ToggleHide",
+    "commands": [{
+      "id": "0c6cb31c-7ba2-44f9-a54c-29ad0a84ffb4",
+      "comment": "",
+      "command": "open",
+      "target": "/test-automation-practices/#/dynamic-elements",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80577bb2-19c0-46f2-80d2-e1ac0dc55e17",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"toggle-hidden-button\"]",
+      "targets": [
+        ["css=*[data-test=\"toggle-hidden-button\"]", "css:data-attr"],
+        ["css=.bg-gray-500", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//main/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Toggle Hidden Content')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ab34db7-4205-43f1-ba2d-0e81667926c5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.bg-yellow-100",
+      "targets": [
+        ["css=.bg-yellow-100", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div[3]/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'This content is sometimes hidden!')]", "xpath:innerText"]
+      ],
+      "value": "This content is sometimes hidden!"
+    }, {
+      "id": "72e4d6f6-3ace-448b-b721-aff8710ce41a",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"toggle-hidden-button\"]",
+      "targets": [
+        ["css=*[data-test=\"toggle-hidden-button\"]", "css:data-attr"],
+        ["css=.bg-gray-500", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//main/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Toggle Hidden Content')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d27dc7c1-4431-4a3b-b7e2-8653510ec14c",
+    "name": "Check_after_5_Sec_when_Slider ist set to 3 seconds",
+    "commands": [{
+      "id": "36da5445-49a7-4092-9504-eda98761fc11",
+      "comment": "",
+      "command": "store",
+      "target": "3",
+      "targets": [],
+      "value": "slider"
+    }, {
+      "id": "e6055494-63c8-4ec4-b0e6-472f3b1fac8a",
+      "comment": "",
+      "command": "echo",
+      "target": "${slider}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d5353b5-13fa-486e-a182-e22ac1ce1541",
+      "comment": "",
+      "command": "store",
+      "target": "5000",
+      "targets": [],
+      "value": "wait"
+    }, {
+      "id": "f7e0bed6-2e7d-48c5-bfb1-c338596a18cd",
+      "comment": "",
+      "command": "echo",
+      "target": "${wait}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5bdec8c-6eab-4b5d-ae3a-f840fc89c7bc",
+      "comment": "",
+      "command": "run",
+      "target": "execute_testcase",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d68a75a7-e1da-49b0-80fc-25797c07ef8b",
+    "name": "execute_testcase",
+    "commands": [{
+      "id": "d6b2c1e0-348c-43d1-9291-2c32df1993df",
+      "comment": "",
+      "command": "open",
+      "target": "/test-automation-practices/#/dynamic-elements",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3149ee0-cb0a-4dc5-97e2-e2f38beec552",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab925e96-df1d-4f53-9a48-3e187957323f",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=div[data-test=\"loading-indicator\"]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "570c69f9-96e3-41b0-96c8-44ec81252569",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=*[data-test=\"content-area\"] ul",
+      "targets": [
+        ["css=*[data-test=\"content-area\"]", "css:data-attr"],
+        ["css=.min-h-\\[200px\\]", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abc4bbc1-4e42-4404-9cb8-efb4f32a0e01",
+      "comment": "",
+      "command": "type",
+      "target": "css=*[data-test=\"load-time-slider\"]",
+      "targets": [
+        ["css=*[data-test=\"load-time-slider\"]", "css:data-attr"],
+        ["css=.w-48", "css:finder"],
+        ["xpath=//input[@value='13']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${slider}"
+    }, {
+      "id": "b4b38ad6-5edd-4e07-9ac6-7d357596cd1b",
+      "comment": "",
+      "command": "pause",
+      "target": "500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cd55413-e23e-4de0-a1ff-ce3f9dff7913",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=*[data-test=\"load-time-value\"]",
+      "targets": [
+        ["css=*[data-test=\"load-time-value\"]", "css:data-attr"],
+        ["css=.flex > .text-gray-900", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'13s')]", "xpath:innerText"]
+      ],
+      "value": "${slider}s"
+    }, {
+      "id": "006b9364-c79c-4d97-9e2b-38f5bacb727c",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=*[data-test=\"content-area\"] ul",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0472415-bc22-42bd-b2c7-2b65e1f0cc68",
+      "comment": "",
+      "command": "pause",
+      "target": "${wait}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69555177-8a8d-478b-a9c6-470f1e018089",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=*[data-test=\"content-area\"] ul",
+      "targets": [
+        ["css=*[data-test=\"content-area\"]", "css:data-attr"],
+        ["css=.min-h-\\[200px\\]", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/main/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//main/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "99c531a3-94f8-4b6e-bd43-f724afa531c8",
+    "name": "Check_after_5_Sec_when_Slider_is_set_to_14",
+    "commands": [{
+      "id": "b7e16ff6-3f3b-4b02-80c1-5d2eaeedd0ec",
+      "comment": "",
+      "command": "store",
+      "target": "14",
+      "targets": [],
+      "value": "slider"
+    }, {
+      "id": "259b0e4f-71e7-43f0-b7ca-93533711b40e",
+      "comment": "",
+      "command": "echo",
+      "target": "${slider}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8ec6a09-9365-4864-afc7-2c107d8f87ec",
+      "comment": "",
+      "command": "store",
+      "target": "5000",
+      "targets": [],
+      "value": "wait"
+    }, {
+      "id": "6a7e2f62-e52c-4734-af4d-d83abb812cd7",
+      "comment": "",
+      "command": "echo",
+      "target": "${wait}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3990f6f-211e-4dcf-beb2-413d611b7386",
+      "comment": "",
+      "command": "run",
+      "target": "execute_testcase",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2d64da04-04a5-431f-877f-223a10ddeeaa",
+    "name": "Check_after_14_Sec_when_Slider_is_set_to_14",
+    "commands": [{
+      "id": "20a94a5a-45cd-4284-ba94-db1d7701a3c6",
+      "comment": "",
+      "command": "store",
+      "target": "14",
+      "targets": [],
+      "value": "slider"
+    }, {
+      "id": "ed981e39-8f0d-448b-8cd2-39db8ee69339",
+      "comment": "",
+      "command": "echo",
+      "target": "${slider}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "086875b5-4a99-488d-aeb2-7e225af6a6b1",
+      "comment": "",
+      "command": "store",
+      "target": "14000",
+      "targets": [],
+      "value": "wait"
+    }, {
+      "id": "dfd6c52a-f126-4dd3-a243-21448873c49b",
+      "comment": "",
+      "command": "echo",
+      "target": "${wait}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da145848-bde8-4f4c-90e9-43d6b562aee8",
+      "comment": "",
+      "command": "run",
+      "target": "execute_testcase",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e1db8a73-d527-468b-9e17-840a07584c97",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["53d3e346-02ac-41cd-aeed-6d6a8fc4459a", "2d64da04-04a5-431f-877f-223a10ddeeaa", "d27dc7c1-4431-4a3b-b7e2-8653510ec14c", "99c531a3-94f8-4b6e-bd43-f724afa531c8"]
+  }],
+  "urls": ["https://moatazeldebsy.github.io/"],
+  "plugins": []
+}
