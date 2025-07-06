@@ -1,0 +1,12 @@
+Create Selenium IDE testcase for:
+https://yekoshy.github.io/EasySlider/ => done in class
+https://demoqa.com/slider => done in class
+https://moatazeldebsy.github.io/test-automation-practices/?#/dynamic-elements =>basic done 2.7.25, needs some tweaks for expected fails
+https://testpages.eviltester.com/styled/dynamic-buttons-simple.html
+https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html
+
+Create JS snippet for:
+https://yekoshy.github.io/EasySlider/
+https://moatazeldebsy.github.io/test-automation-practices/?#/dynamic-elements =>dynamicContentTesting.js
+https://testpages.eviltester.com/styled/dynamic-buttons-simple.html
+https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html
