@@ -10,5 +10,5 @@ const valueDisplay = document.querySelector("#sliderValueDisplay");
     slider.addEventListener("input", () => {
       valueDisplay.textContent = slider.value;
     });
-
-    valueDisplay.textContent = slider.value;
+slider.value = 75;
+valueDisplay.textContent = slider.value;
