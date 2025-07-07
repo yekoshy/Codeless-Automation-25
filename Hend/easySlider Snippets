@@ -1,0 +1,14 @@
+document.querySelector("#mySlider")
+document.querySelector("#sliderValueDisplay")
+
+
+
+
+
+const slider = document.querySelector("#mySlider");
+const valueDisplay = document.querySelector("#sliderValueDisplay");
+    slider.addEventListener("input", () => {
+      valueDisplay.textContent = slider.value;
+    });
+
+    valueDisplay.textContent = slider.value;
