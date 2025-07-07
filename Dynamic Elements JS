@@ -1,0 +1,14 @@
+const slider = document.querySelector('[data-test="load-time-slider"]');
+const valueLabel = document.querySelector('[data-test="load-time-value"]');
+
+
+slider.value = 3000;
+slider.dispatchEvent(new Event('input')); 
+console.log('Slider value set to:', valueLabel.textContent);
+ document.querySelector('[data-test="reload-button"]').click();
+setTimeout(() => {
+  for (let i = 0; i < 3; i++) {
+    const item = document.querySelector(`[data-test="dynamic-item-${i}"]`);
+    console.log(`Dynamic Content ${i + 1}:`, item?.textContent?.trim());
+  }
+}, 2500);
