@@ -15,7 +15,8 @@ function SelectAssert(day,month,year){
           setTimeout(()=>{
               console.log(document.querySelector("#datePickerMonthYearInput").value)
               let result = document.querySelector("#datePickerMonthYearInput").value;
-              let expected = month+'/'+day+'/'+year
+              let expectedMonth = Number(month)+1;
+              let expected = expectedMonth+'/'+day+'/'+year
               console.assert(result == expected)
           },500)        
       },500)
