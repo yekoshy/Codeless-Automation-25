@@ -1,0 +1,11 @@
+const slider = document.querySelector('[data-test="load-time-slider"]');
+const valueLabel = document.querySelector('[data-test="load-time-value"]');
+
+
+
+slider.addEventListener('input', () => {
+  valueLabel.textContent = `${slider.value}s`;
+});
+slider.value = 10;
+slider.dispatchEvent(new Event('input'));
+
