@@ -6,8 +6,7 @@ https://testpages.eviltester.com/styled/dynamic-buttons-simple.html<br>
 https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html<br>
 
 **Create JS snippet for:** <br>
-https://demoqa.com/date-picker<br>
-https://practice-automation.com/calendars/<br> 
+https://demoqa.com/accordian<br>
 
 **Challenges-Snippet:**<br>
 https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html<br>
