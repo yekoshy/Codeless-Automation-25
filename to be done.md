@@ -7,6 +7,7 @@ https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html<br>
 
 **Create JS snippet for:** <br>
 https://demoqa.com/accordian<br>
+https://practice-automation.com/accordions/<br>
 
 **Challenges-Snippet:**<br>
 https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html<br>
