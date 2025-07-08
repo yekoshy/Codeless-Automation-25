@@ -1,8 +1,7 @@
 **Create Selenium IDE testcase for:** <br>
-https://demoqa.com/date-picker<br>
-https://practice-automation.com/calendars/<br>
+https://demoqa.com/accordian<br>
 
-**Challenges:**<br>
+**Challenges-SIDE:** <br>
 https://testpages.eviltester.com/styled/dynamic-buttons-simple.html<br>
 https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html<br>
 
@@ -10,7 +9,6 @@ https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html<br>
 https://demoqa.com/date-picker<br>
 https://practice-automation.com/calendars/<br> 
 
-**Challenges:**<br>
-https://testpages.eviltester.com/styled/dynamic-buttons-simple.html<br>
+**Challenges-Snippet:**<br>
 https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html<br>
 
