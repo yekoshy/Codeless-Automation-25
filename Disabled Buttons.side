@@ -1,0 +1,189 @@
+{
+  "id": "9df2665a-b6f6-4195-a0fd-814030888a66",
+  "version": "2.0",
+  "name": "Disabled Buttons",
+  "url": "https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html",
+  "tests": [{
+    "id": "43ce594b-c694-47a7-9f53-ef5788880686",
+    "name": "test1",
+    "commands": [{
+      "id": "0b2f9f19-bea8-4b23-b876-4eba43966b04",
+      "comment": "",
+      "command": "open",
+      "target": "https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c00c3953-8d46-4061-a078-9b962a2a3cc2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\"#button01\").disabled && document.querySelector(\"#button02\").disabled && document.querySelector(\"#button03\").disabled",
+      "targets": [],
+      "value": "Flag"
+    }, {
+      "id": "99154316-1e35-4439-916e-a3a6e41785f9",
+      "comment": "",
+      "command": "echo",
+      "target": "${Flag}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac192179-9d5b-4e90-ab03-43e460230e03",
+      "comment": "",
+      "command": "assert",
+      "target": "Flag",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d23eaaf1-3b1f-4c9d-b13e-4b3a2a2b4222",
+      "comment": "",
+      "command": "click",
+      "target": "id=button00",
+      "targets": [
+        ["id=button00", "id"],
+        ["css=#button00", "css:finder"],
+        ["xpath=//button[@id='button00']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'start')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e38d3e94-901c-41e0-88e4-0a9d782aa3c0",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdd93fcd-2ce8-4166-a757-e3bc520165a6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\"#button01\").hasAttribute('disabled')",
+      "targets": [],
+      "value": "DB1"
+    }, {
+      "id": "d2b79ac9-6ad2-43b7-a2df-bdd0b7f5c728",
+      "comment": "",
+      "command": "echo",
+      "target": "Button1 is clickable",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aed1dafc-755f-4e6c-b55e-f71b25ac496b",
+      "comment": "",
+      "command": "click",
+      "target": "id=button01",
+      "targets": [
+        ["id=button01", "id"],
+        ["css=#button01", "css:finder"],
+        ["xpath=//button[@id='button01']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'One')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d5e115f-1558-4361-81aa-aad2230bc563",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${DB1} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f37deb67-bd6d-48e0-8172-e9108daa991e",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bd4e2b9-3205-4249-b53e-3538a9183a3f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\"#button02\").hasAttribute('disabled')",
+      "targets": [],
+      "value": "DB2"
+    }, {
+      "id": "406c1cd7-cccb-43c8-9eff-a1e688739623",
+      "comment": "",
+      "command": "echo",
+      "target": "Button2 is clickable",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11ec6e56-9463-47b0-a1a6-7ef9df3cbb51",
+      "comment": "",
+      "command": "click",
+      "target": "id=button02",
+      "targets": [
+        ["id=button02", "id"],
+        ["css=#button02", "css:finder"],
+        ["xpath=//button[@id='button02']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Two')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53e66d93-04a7-4a9a-96aa-12d3204ce2a3",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${DB2} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "119ab735-e9a2-43e7-90e0-ec0e4a00e88b",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4553d734-5c54-44b2-a631-5793a3291f8b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\"#button03\").hasAttribute('disabled')",
+      "targets": [],
+      "value": "DB3"
+    }, {
+      "id": "d908ddc0-20a7-4294-87fe-c3638cc05978",
+      "comment": "",
+      "command": "echo",
+      "target": "Button3 is clickable",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ec16199-e5dd-43e6-8c55-bdd7818a9058",
+      "comment": "",
+      "command": "click",
+      "target": "id=button03",
+      "targets": [
+        ["id=button02", "id"],
+        ["css=#button02", "css:finder"],
+        ["xpath=//button[@id='button02']", "xpath:attributes"],
+        ["xpath=//div[@id='buttons']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Two')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8305612-e45b-4998-8d1e-c06c4878ed6c",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${DB3} == true",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0766a87b-d89d-44d3-ad61-b6c7563674a1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["43ce594b-c694-47a7-9f53-ef5788880686"]
+  }],
+  "urls": ["https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html"],
+  "plugins": []
+}
