@@ -32,6 +32,7 @@ function checkAkkordionStatus(locator) {
 function waitForSomething(times) {
   let counter = 0;
   let isElapsed = setInterval(() => {
+    counter++;
     if (counter == 10) {
       clearInterval(isElapsed);
       console.log(`${times}/10 seconds elapsed`);
