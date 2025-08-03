@@ -1,6 +1,6 @@
 //https://moatazeldebsy.github.io/test-automation-practices/?#/dynamic-elements
 
-//Ddynamic Elements DOM
+//Dynamic Elements DOM
 const myDynamicElements = document.querySelectorAll("main ul li[data-test]");
 const timerInput = document.querySelector(
   'main input[data-test="load-time-slider"]'
@@ -43,6 +43,7 @@ function checkHideShow() {
    if isLoading is false, assert for the ul and the time it took to show up */
 
 function checkDynamicContent(times = 10) {
+  console.log(times);
   reloadBtn.click();
   let dccOverTime = [];
   let dccPushCount = 0;
@@ -57,7 +58,7 @@ function checkDynamicContent(times = 10) {
       isItLoading: isLoading,
     });
     dccPushCount++;
-    console.log(dccPushCount);
+    //console.log(dccPushCount);
     console.log(dccOverTime[dccPushCount - 1]);
     if (isLoading === false) {
       console.assert(
@@ -74,6 +75,9 @@ function checkDynamicContent(times = 10) {
 
     if (dccPushCount >= times) {
       clearInterval(checkOverTime);
+      if (isLoading == true) {
+        console.log(`isLoading is still true after ${times / 2} seconds`);
+      }
     }
   }, 500);
 }
