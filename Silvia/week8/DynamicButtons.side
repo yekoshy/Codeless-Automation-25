@@ -5,7 +5,7 @@
   "url": "https://testpages.eviltester.com",
   "tests": [{
     "id": "1bdc75a9-47e2-4211-84e0-240405928775",
-    "name": "Basic_recording",
+    "name": "Basic_test",
     "commands": [{
       "id": "9c2eb00c-0b8a-4b5e-8ef8-1f700f80fe27",
       "comment": "",
@@ -67,7 +67,7 @@
       "command": "assertText",
       "target": "id=waitmessage",
       "targets": [],
-      "value": "\"Wait...\""
+      "value": "Wait..."
     }, {
       "id": "e755fa90-e19d-4c4b-9d77-abb742396c62",
       "comment": "",
@@ -95,7 +95,7 @@
       "command": "assertText",
       "target": "id=waitmessage",
       "targets": [],
-      "value": "\"Wait...\""
+      "value": "Wait..."
     }, {
       "id": "1652f11f-a753-463b-a0f5-41426fd2ad2b",
       "comment": "",
