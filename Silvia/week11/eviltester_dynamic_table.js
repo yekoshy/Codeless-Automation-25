@@ -55,7 +55,7 @@ function myGridHelper(columns, rows){
             let value = `${j}, ${k}`;
             row[columNames[k]] = value;
         }
-        console.log(JSON.stringify(row));
+        //console.log(JSON.stringify(row));
         tabledata.push(row);
         
    
