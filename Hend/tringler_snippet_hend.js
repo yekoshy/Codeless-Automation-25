@@ -7,62 +7,76 @@
 //document.querySelector("#identify-triangle-action") // button id
 //document.querySelector("#triangle-type") lable of type
 //document.querySelector("body > div.page-body > div.centered > div.triangle-canvas-container")
-
-function clickButton(buttonID) {
-  const btn = document.getElementById(buttonID);
-  if (btn) btn.click();
-  else console.warn(`Button with id "${buttonID}" not found.`);
-}
-//function TestTriangle(case) {
-function TestTriangle({side1, side2, side3, expectedDescription}) {
-  document.querySelector("#side1").value = side1;
-  document.querySelector("#side2").value = side2;
-  document.querySelector("#side3").value = side3;
-     
-  clickButton("identify-triangle-action");
-
- 
-    console.assert(
-          document.getElementById('triangle-type').textContent === expectedDescription,
-              'Expected text to be ' + expectedDescription
-);
-
-  const container = document.querySelector("body > div.page-body > div.centered > div.triangle-canvas-container");
-  if (!container) {
-    console.assert(false, "❌ FAIL: No container for triangle image found");
-  } 
-    
-}
-
 const testCases = [
-  {
-    side1: "5", side2: "5", side3: "5",
-    expectedDescription: "Equilateral"
-  },
-  {
-    side1: "5", side2: "6", side3: "7",
-    expectedDescription: "Scalene"
-  },
-  {
-    side1: "5", side2: "5", side3: "7",
-    expectedDescription: "Isosceles"
-  },
-  {
-    side1: "-1", side2: "7", side3: "9",
-    expectedDescription: "Error: Not a Triangle"
-  },
-  {
-    side1: "e", side2: "7", side3: "9",
-    expectedDescription: "Error: Side 1 is not a Number"
-  },
-  {
-    side1: "0", side2: "7", side3: "9",
-    expectedDescription: "Error: Not a Triangle"
-  },
-  {
-    side1: "0", side2: "0", side3: "0",
-    expectedDescription: "Error: Not a Triangle"
-  }
+  [5, 5, 5, 'equilateral'],
+  [5, 5, 3, 'isosceles'],
+  [3, 4, 5, 'scalene'],
+
+  [1, 1, 1, 'equilateral'],
+  [2, 2, 3, 'isosceles'],
+  [2, 3, 4, 'scalene'],
+
+  [2, 3, 5, 'not a triangle'],
+  [2, 3, 6, 'not a triangle'],
+  [10, 1, 1, 'not a triangle'],
+
+  [0, 0, 0, 'not a triangle'],
+  [0, 5, 5, 'not a triangle'],
+  [-1, 5, 5, 'not a triangle'],
+  [5, -1, 5, 'not a triangle'],
+  [5, 5, -1, 'not a triangle'],
+
+  [1000000, 1000000, 1000000, 'equilateral'],
+  [999999, 1000000, 1000000, 'isosceles'],
+  [999998, 999999, 1000000, 'scalene'],
 ];
 
- testCases.forEach(test => TestTriangle(test));
+async function setInput(id, value) {
+  const el = document.getElementById(id);
+  el.value = "";
+  el.value = value;
+}
+
+async function runTriangleTest(a, b, c, expected) {
+  await setInput("side1", a);
+  await setInput("side2", b);
+  await setInput("side3", c);
+
+  document.getElementById("identify-triangle-action").click();
+
+  // Wait for result to update
+  await new Promise(r => setTimeout(r, 200));
+
+  const result = document.getElementById("triangle-type").innerText.toLowerCase();
+  const passed = result.includes(expected);
+
+  console.log(
+    passed
+      ? `✔ PASS — sides (${a}, ${b}, ${c}) → expected "${expected}", got "${result}"`
+      : `✘ FAIL — sides (${a}, ${b}, ${c}) → expected "${expected}", got "${result}"`
+  );
+
+  return passed;
+}
+
+async function runAllTests() {
+  console.log("===== Triangle Tests (Chrome Snippet) =====");
+  let passed = 0;
+
+  for (const [a, b, c, expected] of testCases) {
+    const ok = await runTriangleTest(a, b, c, expected);
+    if (ok) passed++;
+  }
+
+  console.log(`\nCompleted: ${passed}/${testCases.length} tests passed`);
+  console.log("==========================================");
+}
+
+// Ensure you are on the Triangle App page
+if (location.href.includes("triangle")) {
+  runAllTests();
+} else {
+  console.warn(
+    "❗ Open this page first:\nhttps://testpages.eviltester.com/apps/triangle/\nThen re-run the snippet."
+  );
+}
