@@ -85,9 +85,3 @@ The repository is organized with a collection of root-level scripts plus contrib
 1. Create a `.js` file at the repository root or inside a contributor folder.
 2. Include a short header comment explaining the target page and expected behavior.
 3. Optionally add a matching snippet in Chrome DevTools for quick access.
-
-## Contact / Maintenance
-Treat this repo as a shared snippets library. If you want documentation improvements or grouping by feature, open an issue or add a PR with suggested edits.
-
----
-Generated: December 19, 2025
